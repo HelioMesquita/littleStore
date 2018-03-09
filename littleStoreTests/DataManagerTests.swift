@@ -19,6 +19,14 @@ class DataManagerTests: XCTestCase {
     XCTAssertTrue(!products.isEmpty)
   }
 
+  func testSelectProductSaved() {
+    let _ = Product.create(id: bananaId, name: "banana", price: "10.0")
+    let product = DataManager.selectProductBy(bananaId)
+    XCTAssertEqual(product.name, "banana")
+    XCTAssertEqual(product.price, 10.0)
+    XCTAssertEqual(product.id, "1")
+  }
+
   override func tearDown() {
     super.tearDown()
     if Disk.exists(BarcodeList.barcodeListPath, in: .documents) {

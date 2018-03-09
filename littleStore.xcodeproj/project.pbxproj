@@ -11,6 +11,7 @@
 		7BD8B2285017FA54EC009863 /* Pods_littleStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C14E605D7AB597E47FA0BEC3 /* Pods_littleStore.framework */; };
 		CCFFA0D1F68558C722220F18 /* Pods_littleStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02901E189DF310B06B323367 /* Pods_littleStoreTests.framework */; };
 		FD17B5DD20535193001800F6 /* ProductTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD17B5DC20535193001800F6 /* ProductTest.swift */; };
+		FD17B5DF205353A2001800F6 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD17B5DE205353A2001800F6 /* ScannerViewController.swift */; };
 		FDB797172051F85F00E66C91 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB797162051F85F00E66C91 /* DataManager.swift */; };
 		FDB797192052020E00E66C91 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB797182052020E00E66C91 /* Alert.swift */; };
 		FDB7971B2052200900E66C91 /* BarcodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7971A2052200900E66C91 /* BarcodeList.swift */; };
@@ -55,6 +56,7 @@
 		CBBC7BEDB30DEE9B28390024 /* Pods-littleStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-littleStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-littleStore/Pods-littleStore.release.xcconfig"; sourceTree = "<group>"; };
 		E3F195BC477DF422115A07CF /* Pods-littleStoreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-littleStoreUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-littleStoreUITests/Pods-littleStoreUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FD17B5DC20535193001800F6 /* ProductTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTest.swift; sourceTree = "<group>"; };
+		FD17B5DE205353A2001800F6 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		FDB797162051F85F00E66C91 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		FDB797182052020E00E66C91 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		FDB7971A2052200900E66C91 /* BarcodeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeList.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			children = (
 				FDBE776D2050A2560023F5B5 /* ProductsViewController.swift */,
 				FDBE77A32050B4710023F5B5 /* ProductDetailViewController.swift */,
+				FD17B5DE205353A2001800F6 /* ScannerViewController.swift */,
 			);
 			path = ViewsController;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				FDBE77A42050B4710023F5B5 /* ProductDetailViewController.swift in Sources */,
 				FDB797172051F85F00E66C91 /* DataManager.swift in Sources */,
 				FDBE77A72050B9550023F5B5 /* NSNumberExtension.swift in Sources */,
+				FD17B5DF205353A2001800F6 /* ScannerViewController.swift in Sources */,
 				FDBE776C2050A2560023F5B5 /* AppDelegate.swift in Sources */,
 				FDB797192052020E00E66C91 /* Alert.swift in Sources */,
 				FDB7971B2052200900E66C91 /* BarcodeList.swift in Sources */,
