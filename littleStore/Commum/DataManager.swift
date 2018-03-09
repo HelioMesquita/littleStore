@@ -2,8 +2,6 @@ import Disk
 
 class DataManager {
 
-  private static var barcodeListPath = "barcodeListPath.json"
-
   static func getProducts() -> [Product] {
     do {
       if existBarcodeList() {
@@ -11,8 +9,9 @@ class DataManager {
 
         var products = [Product]()
         for id in barcodeList.ids {
-          products.append(selectProductBy(id: id))
+          products.append(selectProductBy(id))
         }
+
         return products
       } else {
         return [Product]()
@@ -24,18 +23,17 @@ class DataManager {
 
   static func insertAndUpdateProduct(_ product: Product) {
     do {
-      let productId = "products/\(product.id).json"
-      if Disk.exists(productId, in: .documents) {
-        try Disk.remove(productId, from: .documents)
+      if Disk.exists(product.path, in: .documents) {
+        try Disk.remove(product.path, from: .documents)
       }
-      try Disk.save(product, to: .documents, as: productId)
+      try Disk.save(product, to: .documents, as: product.path)
       try addProductInBarcodeList(id: product.id)
     } catch {
       fatalError("impossible to save")
     }
   }
 
-  static func selectProductBy(id: String) -> Product {
+  static func selectProductBy(_ id: String) -> Product {
     do {
       return try Disk.retrieve("products/\(id).json", from: .documents, as: Product.self)
     } catch {
@@ -55,14 +53,14 @@ class DataManager {
   }
 
   private static func existBarcodeList() -> Bool {
-    return Disk.exists(barcodeListPath, in: .documents)
+    return Disk.exists(BarcodeList.barcodeListPath, in: .documents)
   }
 
   private static func getBarcodeList() throws -> BarcodeList {
-    return try Disk.retrieve(barcodeListPath, from: .documents, as: BarcodeList.self)
+    return try Disk.retrieve(BarcodeList.barcodeListPath, from: .documents, as: BarcodeList.self)
   }
 
   private static func saveBarcodeList(_ list: BarcodeList) throws {
-    try Disk.save(list, to: .documents, as: barcodeListPath)
+    try Disk.save(list, to: .documents, as: BarcodeList.barcodeListPath)
   }
 }

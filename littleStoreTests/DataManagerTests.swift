@@ -58,4 +58,3 @@ class DataManagerTests: XCTestCase {
     return "products/\(id).json"
   }
 }
-

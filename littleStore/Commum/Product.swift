@@ -1,9 +1,13 @@
 import Foundation
 
 class Product: Codable {
-  var id: String
-  var name: String
-  var price: Float
+  private(set) var id: String
+  private(set) var name: String
+  private(set) var price: Float
+
+  var path: String {
+    return "products/\(id).json"
+  }
 
   init(id: String, name: String, price: Float) {
     self.id = id
