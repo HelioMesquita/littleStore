@@ -2,7 +2,7 @@ import XCTest
 import Disk
 @testable import littleStore
 
-class DataManagerTests: XCTestCase {
+class ProductTests: XCTestCase {
 
   private let bananaId: String = "1"
   private let appleId: String = "2"
@@ -27,18 +27,6 @@ class DataManagerTests: XCTestCase {
     XCTAssertEqual(product.name, "maca")
     XCTAssertEqual(product.price, 20)
     XCTAssertEqual(product.id, appleId)
-  }
-
-  func testRetriveEmptyProductsList() {
-    let products = DataManager.getProducts()
-    XCTAssertTrue(products.isEmpty)
-  }
-
-  func testRetriveProductsList() {
-    let _ = Product.create(id: bananaId, name: "banana", price: "10.0")
-    let _ = Product.create(id: appleId, name: "maca", price: "10.0")
-    let products = DataManager.getProducts()
-    XCTAssertTrue(!products.isEmpty)
   }
 
   override func tearDown() {
