@@ -1,0 +1,832 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25359483A5A2CE02EAA40B8E /* Pods_littleStoreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F98BA13832B9B1E2F8ADB0 /* Pods_littleStoreUITests.framework */; };
+		7BD8B2285017FA54EC009863 /* Pods_littleStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C14E605D7AB597E47FA0BEC3 /* Pods_littleStore.framework */; };
+		CCFFA0D1F68558C722220F18 /* Pods_littleStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02901E189DF310B06B323367 /* Pods_littleStoreTests.framework */; };
+		FDB797172051F85F00E66C91 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB797162051F85F00E66C91 /* DataManager.swift */; };
+		FDB797192052020E00E66C91 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB797182052020E00E66C91 /* Alert.swift */; };
+		FDB7971B2052200900E66C91 /* BarcodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7971A2052200900E66C91 /* BarcodeList.swift */; };
+		FDBE776C2050A2560023F5B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE776B2050A2560023F5B5 /* AppDelegate.swift */; };
+		FDBE776E2050A2560023F5B5 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE776D2050A2560023F5B5 /* ProductsViewController.swift */; };
+		FDBE77712050A2560023F5B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBE776F2050A2560023F5B5 /* Main.storyboard */; };
+		FDBE77732050A2560023F5B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDBE77722050A2560023F5B5 /* Assets.xcassets */; };
+		FDBE77762050A2560023F5B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBE77742050A2560023F5B5 /* LaunchScreen.storyboard */; };
+		FDBE77812050A2560023F5B5 /* littleStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE77802050A2560023F5B5 /* littleStoreTests.swift */; };
+		FDBE778C2050A2560023F5B5 /* littleStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE778B2050A2560023F5B5 /* littleStoreUITests.swift */; };
+		FDBE779B2050A26F0023F5B5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE779A2050A26F0023F5B5 /* Product.swift */; };
+		FDBE779E2050A3A80023F5B5 /* ProductTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE779D2050A3A80023F5B5 /* ProductTest.swift */; };
+		FDBE77A42050B4710023F5B5 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE77A32050B4710023F5B5 /* ProductDetailViewController.swift */; };
+		FDBE77A72050B9550023F5B5 /* NSNumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE77A62050B9550023F5B5 /* NSNumberExtension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDBE777D2050A2560023F5B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDBE77602050A2560023F5B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDBE77672050A2560023F5B5;
+			remoteInfo = littleStore;
+		};
+		FDBE77882050A2560023F5B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDBE77602050A2560023F5B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDBE77672050A2560023F5B5;
+			remoteInfo = littleStore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02901E189DF310B06B323367 /* Pods_littleStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_littleStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07F98BA13832B9B1E2F8ADB0 /* Pods_littleStoreUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_littleStoreUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15B9749BA929A8496E196D22 /* Pods-littleStoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-littleStoreTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-littleStoreTests/Pods-littleStoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3309B8E3FD10B7F68902B5FB /* Pods-littleStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-littleStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-littleStore/Pods-littleStore.debug.xcconfig"; sourceTree = "<group>"; };
+		6BA6E82B36C533BB71783788 /* Pods-littleStoreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-littleStoreUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-littleStoreUITests/Pods-littleStoreUITests.release.xcconfig"; sourceTree = "<group>"; };
+		84EA581E60DAD91FA3EB51D0 /* Pods-littleStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-littleStoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-littleStoreTests/Pods-littleStoreTests.release.xcconfig"; sourceTree = "<group>"; };
+		C14E605D7AB597E47FA0BEC3 /* Pods_littleStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_littleStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBBC7BEDB30DEE9B28390024 /* Pods-littleStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-littleStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-littleStore/Pods-littleStore.release.xcconfig"; sourceTree = "<group>"; };
+		E3F195BC477DF422115A07CF /* Pods-littleStoreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-littleStoreUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-littleStoreUITests/Pods-littleStoreUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FDB797162051F85F00E66C91 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		FDB797182052020E00E66C91 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		FDB7971A2052200900E66C91 /* BarcodeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeList.swift; sourceTree = "<group>"; };
+		FDBE77682050A2560023F5B5 /* littleStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = littleStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDBE776B2050A2560023F5B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FDBE776D2050A2560023F5B5 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		FDBE77702050A2560023F5B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FDBE77722050A2560023F5B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDBE77752050A2560023F5B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FDBE77772050A2560023F5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDBE777C2050A2560023F5B5 /* littleStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = littleStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDBE77802050A2560023F5B5 /* littleStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = littleStoreTests.swift; sourceTree = "<group>"; };
+		FDBE77822050A2560023F5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDBE77872050A2560023F5B5 /* littleStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = littleStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDBE778B2050A2560023F5B5 /* littleStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = littleStoreUITests.swift; sourceTree = "<group>"; };
+		FDBE778D2050A2560023F5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDBE779A2050A26F0023F5B5 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		FDBE779D2050A3A80023F5B5 /* ProductTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTest.swift; sourceTree = "<group>"; };
+		FDBE77A32050B4710023F5B5 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		FDBE77A62050B9550023F5B5 /* NSNumberExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNumberExtension.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDBE77652050A2560023F5B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD8B2285017FA54EC009863 /* Pods_littleStore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDBE77792050A2560023F5B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCFFA0D1F68558C722220F18 /* Pods_littleStoreTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDBE77842050A2560023F5B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25359483A5A2CE02EAA40B8E /* Pods_littleStoreUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EE429B8E9A178F182766DF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C14E605D7AB597E47FA0BEC3 /* Pods_littleStore.framework */,
+				02901E189DF310B06B323367 /* Pods_littleStoreTests.framework */,
+				07F98BA13832B9B1E2F8ADB0 /* Pods_littleStoreUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4393BB02DC3F98FE88AD5632 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3309B8E3FD10B7F68902B5FB /* Pods-littleStore.debug.xcconfig */,
+				CBBC7BEDB30DEE9B28390024 /* Pods-littleStore.release.xcconfig */,
+				15B9749BA929A8496E196D22 /* Pods-littleStoreTests.debug.xcconfig */,
+				84EA581E60DAD91FA3EB51D0 /* Pods-littleStoreTests.release.xcconfig */,
+				E3F195BC477DF422115A07CF /* Pods-littleStoreUITests.debug.xcconfig */,
+				6BA6E82B36C533BB71783788 /* Pods-littleStoreUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FDB797152051F84F00E66C91 /* Commum */ = {
+			isa = PBXGroup;
+			children = (
+				FDB797162051F85F00E66C91 /* DataManager.swift */,
+				FDB797182052020E00E66C91 /* Alert.swift */,
+				FDB7971A2052200900E66C91 /* BarcodeList.swift */,
+			);
+			path = Commum;
+			sourceTree = "<group>";
+		};
+		FDBE775F2050A2560023F5B5 = {
+			isa = PBXGroup;
+			children = (
+				FDBE776A2050A2560023F5B5 /* littleStore */,
+				FDBE777F2050A2560023F5B5 /* littleStoreTests */,
+				FDBE778A2050A2560023F5B5 /* littleStoreUITests */,
+				FDBE77692050A2560023F5B5 /* Products */,
+				4393BB02DC3F98FE88AD5632 /* Pods */,
+				2EE429B8E9A178F182766DF5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FDBE77692050A2560023F5B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDBE77682050A2560023F5B5 /* littleStore.app */,
+				FDBE777C2050A2560023F5B5 /* littleStoreTests.xctest */,
+				FDBE77872050A2560023F5B5 /* littleStoreUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDBE776A2050A2560023F5B5 /* littleStore */ = {
+			isa = PBXGroup;
+			children = (
+				FDB797152051F84F00E66C91 /* Commum */,
+				FDBE77A82050BEB50023F5B5 /* ViewsController */,
+				FDBE77A52050B9350023F5B5 /* Extensions */,
+				FDBE77992050A2650023F5B5 /* Models */,
+				FDBE776B2050A2560023F5B5 /* AppDelegate.swift */,
+				FDBE776F2050A2560023F5B5 /* Main.storyboard */,
+				FDBE77722050A2560023F5B5 /* Assets.xcassets */,
+				FDBE77742050A2560023F5B5 /* LaunchScreen.storyboard */,
+				FDBE77772050A2560023F5B5 /* Info.plist */,
+			);
+			path = littleStore;
+			sourceTree = "<group>";
+		};
+		FDBE777F2050A2560023F5B5 /* littleStoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDBE77802050A2560023F5B5 /* littleStoreTests.swift */,
+				FDBE77822050A2560023F5B5 /* Info.plist */,
+				FDBE779D2050A3A80023F5B5 /* ProductTest.swift */,
+			);
+			path = littleStoreTests;
+			sourceTree = "<group>";
+		};
+		FDBE778A2050A2560023F5B5 /* littleStoreUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FDBE778B2050A2560023F5B5 /* littleStoreUITests.swift */,
+				FDBE778D2050A2560023F5B5 /* Info.plist */,
+			);
+			path = littleStoreUITests;
+			sourceTree = "<group>";
+		};
+		FDBE77992050A2650023F5B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDBE779A2050A26F0023F5B5 /* Product.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FDBE77A52050B9350023F5B5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FDBE77A62050B9550023F5B5 /* NSNumberExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FDBE77A82050BEB50023F5B5 /* ViewsController */ = {
+			isa = PBXGroup;
+			children = (
+				FDBE776D2050A2560023F5B5 /* ProductsViewController.swift */,
+				FDBE77A32050B4710023F5B5 /* ProductDetailViewController.swift */,
+			);
+			path = ViewsController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDBE77672050A2560023F5B5 /* littleStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDBE77902050A2560023F5B5 /* Build configuration list for PBXNativeTarget "littleStore" */;
+			buildPhases = (
+				31D99BC19BE57ACD950D3F3B /* [CP] Check Pods Manifest.lock */,
+				FDBE77642050A2560023F5B5 /* Sources */,
+				FDBE77652050A2560023F5B5 /* Frameworks */,
+				FDBE77662050A2560023F5B5 /* Resources */,
+				A4AB76D1739100336055F6D3 /* [CP] Embed Pods Frameworks */,
+				5199926F77CCBC7CC46BFBC9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = littleStore;
+			productName = littleStore;
+			productReference = FDBE77682050A2560023F5B5 /* littleStore.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FDBE777B2050A2560023F5B5 /* littleStoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDBE77932050A2560023F5B5 /* Build configuration list for PBXNativeTarget "littleStoreTests" */;
+			buildPhases = (
+				93B281FC07ABE784F929B5EE /* [CP] Check Pods Manifest.lock */,
+				FDBE77782050A2560023F5B5 /* Sources */,
+				FDBE77792050A2560023F5B5 /* Frameworks */,
+				FDBE777A2050A2560023F5B5 /* Resources */,
+				14C2E3CB6C11C50742362E12 /* [CP] Embed Pods Frameworks */,
+				3C593F11E1421EFE77D68375 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDBE777E2050A2560023F5B5 /* PBXTargetDependency */,
+			);
+			name = littleStoreTests;
+			productName = littleStoreTests;
+			productReference = FDBE777C2050A2560023F5B5 /* littleStoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FDBE77862050A2560023F5B5 /* littleStoreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDBE77962050A2560023F5B5 /* Build configuration list for PBXNativeTarget "littleStoreUITests" */;
+			buildPhases = (
+				883D37B88A96F316CE35D651 /* [CP] Check Pods Manifest.lock */,
+				FDBE77832050A2560023F5B5 /* Sources */,
+				FDBE77842050A2560023F5B5 /* Frameworks */,
+				FDBE77852050A2560023F5B5 /* Resources */,
+				2BDD31D9190DF522BBBE9E4A /* [CP] Embed Pods Frameworks */,
+				DA37B5422F6CCBBFC3E422FB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDBE77892050A2560023F5B5 /* PBXTargetDependency */,
+			);
+			name = littleStoreUITests;
+			productName = littleStoreUITests;
+			productReference = FDBE77872050A2560023F5B5 /* littleStoreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDBE77602050A2560023F5B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = callidus;
+				TargetAttributes = {
+					FDBE77672050A2560023F5B5 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					FDBE777B2050A2560023F5B5 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FDBE77672050A2560023F5B5;
+					};
+					FDBE77862050A2560023F5B5 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FDBE77672050A2560023F5B5;
+					};
+				};
+			};
+			buildConfigurationList = FDBE77632050A2560023F5B5 /* Build configuration list for PBXProject "littleStore" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDBE775F2050A2560023F5B5;
+			productRefGroup = FDBE77692050A2560023F5B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDBE77672050A2560023F5B5 /* littleStore */,
+				FDBE777B2050A2560023F5B5 /* littleStoreTests */,
+				FDBE77862050A2560023F5B5 /* littleStoreUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDBE77662050A2560023F5B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDBE77762050A2560023F5B5 /* LaunchScreen.storyboard in Resources */,
+				FDBE77732050A2560023F5B5 /* Assets.xcassets in Resources */,
+				FDBE77712050A2560023F5B5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDBE777A2050A2560023F5B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDBE77852050A2560023F5B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14C2E3CB6C11C50742362E12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-littleStoreTests/Pods-littleStoreTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BDD31D9190DF522BBBE9E4A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-littleStoreUITests/Pods-littleStoreUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31D99BC19BE57ACD950D3F3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-littleStore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C593F11E1421EFE77D68375 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-littleStoreTests/Pods-littleStoreTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5199926F77CCBC7CC46BFBC9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-littleStore/Pods-littleStore-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		883D37B88A96F316CE35D651 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-littleStoreUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93B281FC07ABE784F929B5EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-littleStoreTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4AB76D1739100336055F6D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-littleStore/Pods-littleStore-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BarcodeScanner/BarcodeScanner.framework",
+				"${BUILT_PRODUCTS_DIR}/Disk/Disk.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BarcodeScanner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Disk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-littleStore/Pods-littleStore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA37B5422F6CCBBFC3E422FB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-littleStoreUITests/Pods-littleStoreUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDBE77642050A2560023F5B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDBE776E2050A2560023F5B5 /* ProductsViewController.swift in Sources */,
+				FDBE77A42050B4710023F5B5 /* ProductDetailViewController.swift in Sources */,
+				FDB797172051F85F00E66C91 /* DataManager.swift in Sources */,
+				FDBE77A72050B9550023F5B5 /* NSNumberExtension.swift in Sources */,
+				FDBE776C2050A2560023F5B5 /* AppDelegate.swift in Sources */,
+				FDB797192052020E00E66C91 /* Alert.swift in Sources */,
+				FDB7971B2052200900E66C91 /* BarcodeList.swift in Sources */,
+				FDBE779B2050A26F0023F5B5 /* Product.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDBE77782050A2560023F5B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDBE77812050A2560023F5B5 /* littleStoreTests.swift in Sources */,
+				FDBE779E2050A3A80023F5B5 /* ProductTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDBE77832050A2560023F5B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDBE778C2050A2560023F5B5 /* littleStoreUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDBE777E2050A2560023F5B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDBE77672050A2560023F5B5 /* littleStore */;
+			targetProxy = FDBE777D2050A2560023F5B5 /* PBXContainerItemProxy */;
+		};
+		FDBE77892050A2560023F5B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDBE77672050A2560023F5B5 /* littleStore */;
+			targetProxy = FDBE77882050A2560023F5B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FDBE776F2050A2560023F5B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDBE77702050A2560023F5B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FDBE77742050A2560023F5B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDBE77752050A2560023F5B5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FDBE778E2050A2560023F5B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FDBE778F2050A2560023F5B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDBE77912050A2560023F5B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3309B8E3FD10B7F68902B5FB /* Pods-littleStore.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJ3PM54JPR;
+				INFOPLIST_FILE = littleStore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = callidus.littleStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDBE77922050A2560023F5B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBBC7BEDB30DEE9B28390024 /* Pods-littleStore.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJ3PM54JPR;
+				INFOPLIST_FILE = littleStore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = callidus.littleStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FDBE77942050A2560023F5B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15B9749BA929A8496E196D22 /* Pods-littleStoreTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJ3PM54JPR;
+				INFOPLIST_FILE = littleStoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = callidus.littleStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/littleStore.app/littleStore";
+			};
+			name = Debug;
+		};
+		FDBE77952050A2560023F5B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84EA581E60DAD91FA3EB51D0 /* Pods-littleStoreTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJ3PM54JPR;
+				INFOPLIST_FILE = littleStoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = callidus.littleStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/littleStore.app/littleStore";
+			};
+			name = Release;
+		};
+		FDBE77972050A2560023F5B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3F195BC477DF422115A07CF /* Pods-littleStoreUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJ3PM54JPR;
+				INFOPLIST_FILE = littleStoreUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = callidus.littleStoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = littleStore;
+			};
+			name = Debug;
+		};
+		FDBE77982050A2560023F5B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BA6E82B36C533BB71783788 /* Pods-littleStoreUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJ3PM54JPR;
+				INFOPLIST_FILE = littleStoreUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = callidus.littleStoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = littleStore;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDBE77632050A2560023F5B5 /* Build configuration list for PBXProject "littleStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDBE778E2050A2560023F5B5 /* Debug */,
+				FDBE778F2050A2560023F5B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDBE77902050A2560023F5B5 /* Build configuration list for PBXNativeTarget "littleStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDBE77912050A2560023F5B5 /* Debug */,
+				FDBE77922050A2560023F5B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDBE77932050A2560023F5B5 /* Build configuration list for PBXNativeTarget "littleStoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDBE77942050A2560023F5B5 /* Debug */,
+				FDBE77952050A2560023F5B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDBE77962050A2560023F5B5 /* Build configuration list for PBXNativeTarget "littleStoreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDBE77972050A2560023F5B5 /* Debug */,
+				FDBE77982050A2560023F5B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDBE77602050A2560023F5B5 /* Project object */;
+}
