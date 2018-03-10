@@ -13,14 +13,14 @@ class DataManagerTests: XCTestCase {
   }
 
   func testRetriveProductsList() {
-    let _ = Product.create(id: bananaId, name: "banana", price: "10.0")
-    let _ = Product.create(id: appleId, name: "maca", price: "10.0")
+    let _ = Product.save(id: bananaId, name: "banana", price: 10.0)
+    let _ = Product.save(id: appleId, name: "maca", price: 10.0)
     let products = DataManager.getProducts()
     XCTAssertTrue(!products.isEmpty)
   }
 
   func testSelectProductSaved() {
-    let _ = Product.create(id: bananaId, name: "banana", price: "10.0")
+    let _ = Product.save(id: bananaId, name: "banana", price: 10.0)
     let product = DataManager.selectProductBy(bananaId)
     XCTAssertEqual(product.name, "banana")
     XCTAssertEqual(product.price, 10.0)

@@ -8,13 +8,13 @@ class ProductTests: XCTestCase {
   private let appleId: String = "2"
 
   func testCreateProduct() {
-    let _ = Product.create(id: bananaId, name: "banana", price: "10.0")
+    let _ = Product.save(id: bananaId, name: "banana", price: 10.0)
     XCTAssertTrue(Disk.exists(self.standardPath(bananaId) , in: .documents))
   }
 
   func testUpdateProductSaved() {
-    let productBanana = Product.create(id: bananaId, name: "banana", price: "10.0")
-    productBanana?.updateValues(id: appleId, name: "maca", price: 20)
+    let productBanana = Product.save(id: bananaId, name: "banana", price: 10.0)
+    productBanana.update(id: appleId, name: "maca", price: 20)
     let product = DataManager.selectProductBy(appleId)
     XCTAssertEqual(product.name, "maca")
     XCTAssertEqual(product.price, 20)

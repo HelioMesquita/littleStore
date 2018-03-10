@@ -11,7 +11,12 @@
 		7BD8B2285017FA54EC009863 /* Pods_littleStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C14E605D7AB597E47FA0BEC3 /* Pods_littleStore.framework */; };
 		CCFFA0D1F68558C722220F18 /* Pods_littleStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02901E189DF310B06B323367 /* Pods_littleStoreTests.framework */; };
 		FD17B5DD20535193001800F6 /* ProductTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD17B5DC20535193001800F6 /* ProductTest.swift */; };
-		FD17B5DF205353A2001800F6 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD17B5DE205353A2001800F6 /* ScannerViewController.swift */; };
+		FD17B5DF205353A2001800F6 /* BarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD17B5DE205353A2001800F6 /* BarcodeScanner.swift */; };
+		FD75B6C920537F68001B73B3 /* ProductCreateHandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6C820537F68001B73B3 /* ProductCreateHandable.swift */; };
+		FD75B6CB205382E2001B73B3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD75B6CA205382E2001B73B3 /* Localizable.strings */; };
+		FD75B6CD20538313001B73B3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6CC20538313001B73B3 /* StringExtension.swift */; };
+		FD75B6CF205386E0001B73B3 /* ScannerHandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6CE205386E0001B73B3 /* ScannerHandable.swift */; };
+		FD75B6D12053871F001B73B3 /* ProductCreateHandableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6D02053871F001B73B3 /* ProductCreateHandableTest.swift */; };
 		FDB797172051F85F00E66C91 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB797162051F85F00E66C91 /* DataManager.swift */; };
 		FDB797192052020E00E66C91 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB797182052020E00E66C91 /* Alert.swift */; };
 		FDB7971B2052200900E66C91 /* BarcodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7971A2052200900E66C91 /* BarcodeList.swift */; };
@@ -20,7 +25,6 @@
 		FDBE77712050A2560023F5B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBE776F2050A2560023F5B5 /* Main.storyboard */; };
 		FDBE77732050A2560023F5B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDBE77722050A2560023F5B5 /* Assets.xcassets */; };
 		FDBE77762050A2560023F5B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBE77742050A2560023F5B5 /* LaunchScreen.storyboard */; };
-		FDBE77812050A2560023F5B5 /* littleStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE77802050A2560023F5B5 /* littleStoreTests.swift */; };
 		FDBE778C2050A2560023F5B5 /* littleStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE778B2050A2560023F5B5 /* littleStoreUITests.swift */; };
 		FDBE779B2050A26F0023F5B5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE779A2050A26F0023F5B5 /* Product.swift */; };
 		FDBE779E2050A3A80023F5B5 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE779D2050A3A80023F5B5 /* DataManagerTests.swift */; };
@@ -56,7 +60,12 @@
 		CBBC7BEDB30DEE9B28390024 /* Pods-littleStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-littleStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-littleStore/Pods-littleStore.release.xcconfig"; sourceTree = "<group>"; };
 		E3F195BC477DF422115A07CF /* Pods-littleStoreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-littleStoreUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-littleStoreUITests/Pods-littleStoreUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FD17B5DC20535193001800F6 /* ProductTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTest.swift; sourceTree = "<group>"; };
-		FD17B5DE205353A2001800F6 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		FD17B5DE205353A2001800F6 /* BarcodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScanner.swift; sourceTree = "<group>"; };
+		FD75B6C820537F68001B73B3 /* ProductCreateHandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCreateHandable.swift; sourceTree = "<group>"; };
+		FD75B6CA205382E2001B73B3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		FD75B6CC20538313001B73B3 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		FD75B6CE205386E0001B73B3 /* ScannerHandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerHandable.swift; sourceTree = "<group>"; };
+		FD75B6D02053871F001B73B3 /* ProductCreateHandableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCreateHandableTest.swift; sourceTree = "<group>"; };
 		FDB797162051F85F00E66C91 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		FDB797182052020E00E66C91 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		FDB7971A2052200900E66C91 /* BarcodeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeList.swift; sourceTree = "<group>"; };
@@ -68,7 +77,6 @@
 		FDBE77752050A2560023F5B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDBE77772050A2560023F5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDBE777C2050A2560023F5B5 /* littleStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = littleStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDBE77802050A2560023F5B5 /* littleStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = littleStoreTests.swift; sourceTree = "<group>"; };
 		FDBE77822050A2560023F5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDBE77872050A2560023F5B5 /* littleStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = littleStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBE778B2050A2560023F5B5 /* littleStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = littleStoreUITests.swift; sourceTree = "<group>"; };
@@ -130,6 +138,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FD75B6C720537F5D001B73B3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FD75B6C820537F68001B73B3 /* ProductCreateHandable.swift */,
+				FD75B6CE205386E0001B73B3 /* ScannerHandable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		FDB797152051F84F00E66C91 /* Commum */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +183,7 @@
 		FDBE776A2050A2560023F5B5 /* littleStore */ = {
 			isa = PBXGroup;
 			children = (
+				FD75B6C720537F5D001B73B3 /* Protocols */,
 				FDB797152051F84F00E66C91 /* Commum */,
 				FDBE77A82050BEB50023F5B5 /* ViewsController */,
 				FDBE77A52050B9350023F5B5 /* Extensions */,
@@ -174,6 +192,7 @@
 				FDBE77722050A2560023F5B5 /* Assets.xcassets */,
 				FDBE77742050A2560023F5B5 /* LaunchScreen.storyboard */,
 				FDBE77772050A2560023F5B5 /* Info.plist */,
+				FD75B6CA205382E2001B73B3 /* Localizable.strings */,
 			);
 			path = littleStore;
 			sourceTree = "<group>";
@@ -181,10 +200,10 @@
 		FDBE777F2050A2560023F5B5 /* littleStoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				FDBE77802050A2560023F5B5 /* littleStoreTests.swift */,
 				FDBE77822050A2560023F5B5 /* Info.plist */,
 				FDBE779D2050A3A80023F5B5 /* DataManagerTests.swift */,
 				FD17B5DC20535193001800F6 /* ProductTest.swift */,
+				FD75B6D02053871F001B73B3 /* ProductCreateHandableTest.swift */,
 			);
 			path = littleStoreTests;
 			sourceTree = "<group>";
@@ -202,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				FDBE77A62050B9550023F5B5 /* NSNumberExtension.swift */,
+				FD75B6CC20538313001B73B3 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -211,7 +231,7 @@
 			children = (
 				FDBE776D2050A2560023F5B5 /* ProductsViewController.swift */,
 				FDBE77A32050B4710023F5B5 /* ProductDetailViewController.swift */,
-				FD17B5DE205353A2001800F6 /* ScannerViewController.swift */,
+				FD17B5DE205353A2001800F6 /* BarcodeScanner.swift */,
 			);
 			path = ViewsController;
 			sourceTree = "<group>";
@@ -333,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDBE77762050A2560023F5B5 /* LaunchScreen.storyboard in Resources */,
+				FD75B6CB205382E2001B73B3 /* Localizable.strings in Resources */,
 				FDBE77732050A2560023F5B5 /* Assets.xcassets in Resources */,
 				FDBE77712050A2560023F5B5 /* Main.storyboard in Resources */,
 			);
@@ -514,13 +535,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDBE776E2050A2560023F5B5 /* ProductsViewController.swift in Sources */,
+				FD75B6CF205386E0001B73B3 /* ScannerHandable.swift in Sources */,
 				FDBE77A42050B4710023F5B5 /* ProductDetailViewController.swift in Sources */,
 				FDB797172051F85F00E66C91 /* DataManager.swift in Sources */,
 				FDBE77A72050B9550023F5B5 /* NSNumberExtension.swift in Sources */,
-				FD17B5DF205353A2001800F6 /* ScannerViewController.swift in Sources */,
+				FD17B5DF205353A2001800F6 /* BarcodeScanner.swift in Sources */,
+				FD75B6C920537F68001B73B3 /* ProductCreateHandable.swift in Sources */,
 				FDBE776C2050A2560023F5B5 /* AppDelegate.swift in Sources */,
 				FDB797192052020E00E66C91 /* Alert.swift in Sources */,
 				FDB7971B2052200900E66C91 /* BarcodeList.swift in Sources */,
+				FD75B6CD20538313001B73B3 /* StringExtension.swift in Sources */,
 				FDBE779B2050A26F0023F5B5 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,8 +553,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDBE77812050A2560023F5B5 /* littleStoreTests.swift in Sources */,
 				FDBE779E2050A3A80023F5B5 /* DataManagerTests.swift in Sources */,
+				FD75B6D12053871F001B73B3 /* ProductCreateHandableTest.swift in Sources */,
 				FD17B5DD20535193001800F6 /* ProductTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

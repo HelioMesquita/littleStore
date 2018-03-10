@@ -1,0 +1,11 @@
+"alertCreateProductTitle" = "Registrando o Produto";
+"alertCreateProductMessage" = "Insira as informações do produto com código de barras";
+"alertCreateProductNameField" = "Digite o nome do produto";
+"alertCreateProductPriceField" = "Digite o valor do produto";
+"alertGenericTitle" = "Ocorreu um Erro";
+"alertGenericMessage" = "Dados inválidos, tente novamente";
+"buttonSave" = "Cancelar";
+"buttonCancel"= "Salvar";
+"productsViewControllerTitle" = "Produtos Cadastrados";
+"productDetailViewControllerTitle" = "Detalhe do Produto";
+"barcodeView" = "Leitor";

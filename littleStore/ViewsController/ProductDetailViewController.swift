@@ -1,6 +1,6 @@
 import UIKit
 
-class ProductsDetailViewController: UIViewController {
+class ProductsDetailViewController: UIViewController, ProductCreateHandable {
 
   var product: Product?
 
@@ -9,19 +9,17 @@ class ProductsDetailViewController: UIViewController {
   @IBOutlet weak var idField: UITextField!
   
   @IBAction func changeValues(_ sender: Any) {
-    if let name = nameField.text, let price = priceField.text, let id = idField.text {
-      guard let priceNumber = Float(price) else {
-        AlertDefault.genericAlert(self, title: "Dados Invalidos", message: "O valor digitado para alterar o preco é invalido")
-        return
-      }
-      product?.updateValues(id: id, name: name, price: priceNumber)
+    handleProductAttributes(id: idField.text, name: nameField.text, price: priceField.text, onSaved: { product in
+      self.product?.update(id: product.id, name: product.name, price: product.price)
       self.navigationController?.popViewController(animated: true)
-    }
+    }, onFail: {
+      AlertDefault.genericAlert(self, title: nil, message: nil)
+    })
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    title = "Product Detail"
+    title = "productDetailViewControllerTitle".localized
     showProductDetail()
   }
 
