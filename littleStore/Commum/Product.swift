@@ -23,7 +23,7 @@ class Product: Codable {
 
   static func save(id: String, name: String, price: Float) -> Product {
     let product = Product(id: id, name: name, price: price)
-    DataManager.insertAndUpdateProduct(product)
+    DataManager.saveAndUpdateProduct(product)
     return product
   }
 
@@ -31,6 +31,6 @@ class Product: Codable {
     self.id = id
     self.name = name
     self.price = price
-    DataManager.insertAndUpdateProduct(self)
+    DataManager.saveAndUpdateProduct(self)
   }
 }

@@ -5,12 +5,12 @@ class AlertDefault {
 
     let alertController = UIAlertController(title: "alertCreateProductTitle".localized, message: "alertCreateProductMessage".localized, preferredStyle: .alert)
 
-    alertController.addTextField { (textField : UITextField!) -> Void in
+    alertController.addTextField { textField in
       textField.placeholder = "alertCreateProductNameField".localized
       textField.textAlignment = .center
     }
 
-    alertController.addTextField { (textField : UITextField!) -> Void in
+    alertController.addTextField { textField in
       textField.placeholder = "alertCreateProductPriceField".localized
       textField.textAlignment = .center
       textField.keyboardType = .numbersAndPunctuation

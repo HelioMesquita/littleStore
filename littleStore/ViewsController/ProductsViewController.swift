@@ -1,6 +1,6 @@
 import UIKit
 
-class ProductsViewController: UITableViewController, ScannerHandable {
+class ProductsViewController: UITableViewController, ProductInsertProtocol {
 
   var products = [Product]() {
     didSet {
@@ -15,10 +15,6 @@ class ProductsViewController: UITableViewController, ScannerHandable {
   override func viewDidLoad() {
     super.viewDidLoad()
     title = "productsViewControllerTitle".localized
-  }
-
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewDidAppear(true)
     self.products = DataManager.getProducts()
   }
 
@@ -45,6 +41,7 @@ class ProductsViewController: UITableViewController, ScannerHandable {
     if segue.identifier == "detailProduct" {
       guard let index = sender as? Int else { return }
       let viewController = segue.destination as! ProductsDetailViewController
+      viewController.delegate = self
       viewController.product = products[index]
     }
   }

@@ -4,9 +4,9 @@ import BarcodeScanner
 class BarcodeScanner: BarcodeScannerCodeDelegate, ProductCreateHandable {
 
   private var viewController: UIViewController
-  private var delegate: ScannerHandable
+  private var delegate: ProductInsertProtocol
 
-  init(viewController: UIViewController, delegate: ScannerHandable) {
+  init(viewController: UIViewController, delegate: ProductInsertProtocol) {
     self.viewController = viewController
     self.delegate = delegate
   }
@@ -19,10 +19,10 @@ class BarcodeScanner: BarcodeScannerCodeDelegate, ProductCreateHandable {
     viewController.navigationController?.pushViewController(scanner, animated: true)
   }
 
-  internal func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
+  func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
     AlertDefault.productAlert(with: code, viewController: controller) { name, price in
       self.handleProductAttributes(id: code, name: name, price: price, onSaved: { product in
-        DataManager.insertAndUpdateProduct(product)
+        DataManager.saveAndUpdateProduct(product)
         self.delegate.insertNewProduct(product: product)
         controller.navigationController?.popViewController(animated: true)
       }, onFail: {

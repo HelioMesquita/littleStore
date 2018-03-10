@@ -1,3 +1,3 @@
-protocol ScannerHandable {
+protocol ProductInsertProtocol {
   func insertNewProduct(product: Product)
 }

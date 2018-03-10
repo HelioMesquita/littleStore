@@ -17,11 +17,11 @@ class DataManager {
         return [Product]()
       }
     } catch {
-      fatalError("impossible to get files")
+      fatalError("barlist not available")
     }
   }
 
-  static func insertAndUpdateProduct(_ product: Product) {
+  static func saveAndUpdateProduct(_ product: Product) {
     do {
       if Disk.exists(product.path, in: .documents) {
         try Disk.remove(product.path, from: .documents)
@@ -37,7 +37,7 @@ class DataManager {
     do {
       return try Disk.retrieve("products/\(id).json", from: .documents, as: Product.self)
     } catch {
-      fatalError("not founded json")
+      fatalError("json not founded")
     }
   }
 

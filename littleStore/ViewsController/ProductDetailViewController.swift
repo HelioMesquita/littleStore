@@ -3,6 +3,7 @@ import UIKit
 class ProductsDetailViewController: UIViewController, ProductCreateHandable {
 
   var product: Product?
+  var delegate: ProductInsertProtocol?
 
   @IBOutlet weak var nameField: UITextField!
   @IBOutlet weak var priceField: UITextField!
@@ -11,6 +12,7 @@ class ProductsDetailViewController: UIViewController, ProductCreateHandable {
   @IBAction func changeValues(_ sender: Any) {
     handleProductAttributes(id: idField.text, name: nameField.text, price: priceField.text, onSaved: { product in
       self.product?.update(id: product.id, name: product.name, price: product.price)
+      self.delegate?.insertNewProduct(product: product)
       self.navigationController?.popViewController(animated: true)
     }, onFail: {
       AlertDefault.genericAlert(self, title: nil, message: nil)

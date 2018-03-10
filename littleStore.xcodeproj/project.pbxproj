@@ -15,7 +15,7 @@
 		FD75B6C920537F68001B73B3 /* ProductCreateHandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6C820537F68001B73B3 /* ProductCreateHandable.swift */; };
 		FD75B6CB205382E2001B73B3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD75B6CA205382E2001B73B3 /* Localizable.strings */; };
 		FD75B6CD20538313001B73B3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6CC20538313001B73B3 /* StringExtension.swift */; };
-		FD75B6CF205386E0001B73B3 /* ScannerHandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6CE205386E0001B73B3 /* ScannerHandable.swift */; };
+		FD75B6CF205386E0001B73B3 /* ProductInsertProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6CE205386E0001B73B3 /* ProductInsertProtocol.swift */; };
 		FD75B6D12053871F001B73B3 /* ProductCreateHandableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6D02053871F001B73B3 /* ProductCreateHandableTest.swift */; };
 		FDB797172051F85F00E66C91 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB797162051F85F00E66C91 /* DataManager.swift */; };
 		FDB797192052020E00E66C91 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB797182052020E00E66C91 /* Alert.swift */; };
@@ -64,7 +64,7 @@
 		FD75B6C820537F68001B73B3 /* ProductCreateHandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCreateHandable.swift; sourceTree = "<group>"; };
 		FD75B6CA205382E2001B73B3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		FD75B6CC20538313001B73B3 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		FD75B6CE205386E0001B73B3 /* ScannerHandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerHandable.swift; sourceTree = "<group>"; };
+		FD75B6CE205386E0001B73B3 /* ProductInsertProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInsertProtocol.swift; sourceTree = "<group>"; };
 		FD75B6D02053871F001B73B3 /* ProductCreateHandableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCreateHandableTest.swift; sourceTree = "<group>"; };
 		FDB797162051F85F00E66C91 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		FDB797182052020E00E66C91 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				FD75B6C820537F68001B73B3 /* ProductCreateHandable.swift */,
-				FD75B6CE205386E0001B73B3 /* ScannerHandable.swift */,
+				FD75B6CE205386E0001B73B3 /* ProductInsertProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -535,7 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDBE776E2050A2560023F5B5 /* ProductsViewController.swift in Sources */,
-				FD75B6CF205386E0001B73B3 /* ScannerHandable.swift in Sources */,
+				FD75B6CF205386E0001B73B3 /* ProductInsertProtocol.swift in Sources */,
 				FDBE77A42050B4710023F5B5 /* ProductDetailViewController.swift in Sources */,
 				FDB797172051F85F00E66C91 /* DataManager.swift in Sources */,
 				FDBE77A72050B9550023F5B5 /* NSNumberExtension.swift in Sources */,
