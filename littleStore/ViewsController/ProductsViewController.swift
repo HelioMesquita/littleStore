@@ -1,3 +1,4 @@
+import BarcodeScanner
 import UIKit
 
 class ProductsViewController: UITableViewController, ProductInsertProtocol {
@@ -9,7 +10,7 @@ class ProductsViewController: UITableViewController, ProductInsertProtocol {
   }
 
   @IBAction func showScanner(_ sender: Any) {
-    BarcodeScanner(viewController: self, delegate: self).showScanner()
+    showScanner()
   }
 
   override func viewDidLoad() {
@@ -48,5 +49,29 @@ class ProductsViewController: UITableViewController, ProductInsertProtocol {
 
   func insertNewProduct(product: Product) {
     self.products.append(product)
+  }
+}
+
+extension ProductsViewController: BarcodeScannerCodeDelegate, ProductCreateHandable {
+
+  func showScanner() {
+    let scanner = BarcodeScannerViewController()
+    scanner.codeDelegate = self
+    scanner.cameraViewController.barCodeFocusViewType = .oneDimension
+    scanner.title = "barcodeView".localized
+    scanner.isOneTimeSearch = false
+    navigationController?.pushViewController(scanner, animated: true)
+  }
+
+  func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
+    AlertDefault.productAlert(with: code, viewController: controller) { name, price in
+      self.handleProductAttributes(id: code, name: name, price: price, onSaved: { product in
+        DataManager.saveAndUpdateProduct(product)
+        self.insertNewProduct(product: product)
+        controller.navigationController?.popViewController(animated: true)
+      }, onFail: {
+        AlertDefault.genericAlert(controller, title: nil, message: nil)
+      })
+    }
   }
 }
