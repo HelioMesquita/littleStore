@@ -75,7 +75,8 @@
                             <outlet property="delegate" destination="KiC-Et-egU" id="9bh-A4-Pnm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Product List" id="WdI-Tq-Et1">
+                    <navigationItem key="navigationItem" title="Product List" largeTitleDisplayMode="always" id="WdI-Tq-Et1">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="IhB-Ne-3RI"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="3ZB-xU-ehU">
                             <connections>
                                 <action selector="showScanner:" destination="KiC-Et-egU" id="eFJ-rW-ZRO"/>
@@ -98,16 +99,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COP-HO-URV">
-                                <rect key="frame" x="40" y="268" width="50" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COP-HO-URV">
+                                <rect key="frame" x="40" y="268" width="51" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="QpF-t4-yBy"/>
+                                    <constraint firstAttribute="width" constant="51" id="QpF-t4-yBy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aY8-4Y-Q6B">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aY8-4Y-Q6B">
                                 <rect key="frame" x="40" y="323" width="50" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="7xK-Ua-Pjv"/>
@@ -126,7 +127,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YgS-nm-3wF">
-                                <rect key="frame" x="150" y="263.5" width="185" height="30"/>
+                                <rect key="frame" x="151" y="263.5" width="184" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -146,7 +147,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNX-eb-mSu">
                                 <rect key="frame" x="40" y="443.5" width="295" height="30"/>
                                 <color key="backgroundColor" red="0.2012402713" green="0.3980154991" blue="0.65952897070000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Change!">
+                                <state key="normal" title="Alterar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>

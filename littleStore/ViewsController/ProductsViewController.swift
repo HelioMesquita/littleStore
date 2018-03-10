@@ -29,7 +29,7 @@ class ProductsViewController: UITableViewController, ProductInsertProtocol {
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath)
-    cell.textLabel?.text = products[indexPath.row].name
+    cell.textLabel?.text = products[indexPath.row].name.capitalized
     cell.detailTextLabel?.text = products[indexPath.row].id
     return cell
   }
