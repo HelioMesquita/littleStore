@@ -1,7 +1,7 @@
 import BarcodeScanner
 import UIKit
 
-class ProductsViewController: UITableViewController, ProductInsertProtocol {
+class ProductsViewController: UITableViewController, ProductLoadable {
 
   var products = [Product]() {
     didSet {
@@ -16,7 +16,7 @@ class ProductsViewController: UITableViewController, ProductInsertProtocol {
   override func viewDidLoad() {
     super.viewDidLoad()
     title = "productsViewControllerTitle".localized
-    self.products = DataManager.getProducts()
+    loadProducts()
   }
 
   override func numberOfSections(in tableView: UITableView) -> Int {
@@ -47,8 +47,8 @@ class ProductsViewController: UITableViewController, ProductInsertProtocol {
     }
   }
 
-  func insertNewProduct(product: Product) {
-    self.products.append(product)
+  func loadProducts() {
+    self.products = DataManager.getProducts()
   }
 }
 
@@ -66,8 +66,8 @@ extension ProductsViewController: BarcodeScannerCodeDelegate, ProductCreateHanda
   func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
     AlertDefault.productAlert(with: code, viewController: controller) { name, price in
       self.handleProductAttributes(id: code, name: name, price: price, onSaved: { product in
-        DataManager.saveAndUpdateProduct(product)
-        self.insertNewProduct(product: product)
+        DataManager.saveProduct(product)
+        self.loadProducts()
         controller.navigationController?.popViewController(animated: true)
       }, onFail: {
         AlertDefault.genericAlert(controller, title: nil, message: nil)

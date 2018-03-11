@@ -1,3 +1,3 @@
-protocol ProductInsertProtocol {
-  func insertNewProduct(product: Product)
+protocol ProductLoadable {
+  func loadProducts()
 }

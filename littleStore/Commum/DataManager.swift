@@ -21,15 +21,22 @@ class DataManager {
     }
   }
 
-  static func saveAndUpdateProduct(_ product: Product) {
+  static func saveProduct(_ product: Product) {
     do {
-      if Disk.exists(product.path, in: .documents) {
-        try Disk.remove(product.path, from: .documents)
-      }
       try Disk.save(product, to: .documents, as: product.path)
       try addProductInBarcodeList(id: product.id)
     } catch {
       fatalError("impossible to save")
+    }
+  }
+
+  static func updateProduct(where product: Product, toProduct: Product) {
+    do {
+      try Disk.remove(product.path, from: .documents)
+      try Disk.save(toProduct, to: .documents, as: toProduct.path)
+      try addProductInBarcodeList(id: toProduct.id)
+    } catch {
+      fatalError("impossible to update")
     }
   }
 

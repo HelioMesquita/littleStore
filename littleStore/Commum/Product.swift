@@ -20,17 +20,4 @@ class Product: Codable {
     case name
     case price
   }
-
-  static func save(id: String, name: String, price: Float) -> Product {
-    let product = Product(id: id, name: name, price: price)
-    DataManager.saveAndUpdateProduct(product)
-    return product
-  }
-
-  func update(id: String, name: String, price: Float) {
-    self.id = id
-    self.name = name
-    self.price = price
-    DataManager.saveAndUpdateProduct(self)
-  }
 }
