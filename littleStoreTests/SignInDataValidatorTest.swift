@@ -30,7 +30,7 @@ class SignInDataValidatorTest: XCTestCase {
     let email: String = "helio@helio.com.br"
     let password: String = "123456"
     let passwordCopy: String = "123456"
-    subject.validateSignIn(name: name, email: email, password: password, passwordCopy: passwordCopy)
+    subject.validateSignInFields(name: name, email: email, password: password, passwordCopy: passwordCopy)
 
     XCTAssertTrue(subject.succeed)
     XCTAssertEqual(subject.user?.name, name)
@@ -43,7 +43,7 @@ class SignInDataValidatorTest: XCTestCase {
     let email: String = "helio@helio.com.br"
     let password: String = "123456"
     let passwordCopy: String = "1234568"
-    subject.validateSignIn(name: name, email: email, password: password, passwordCopy: passwordCopy)
+    subject.validateSignInFields(name: name, email: email, password: password, passwordCopy: passwordCopy)
 
     XCTAssertTrue(subject.failed)
   }
@@ -52,7 +52,7 @@ class SignInDataValidatorTest: XCTestCase {
     let name: String = "helio"
     let password: String = "123456"
     let passwordCopy: String = "1234568"
-    subject.validateSignIn(name: name, email: nil, password: password, passwordCopy: passwordCopy)
+    subject.validateSignInFields(name: name, email: nil, password: password, passwordCopy: passwordCopy)
 
     XCTAssertTrue(subject.failed)
   }
@@ -61,7 +61,7 @@ class SignInDataValidatorTest: XCTestCase {
     let email: String = "helio@helio.com.br"
     let password: String = "123456"
     let passwordCopy: String = "1234568"
-    subject.validateSignIn(name: nil, email: email, password: password, passwordCopy: passwordCopy)
+    subject.validateSignInFields(name: nil, email: email, password: password, passwordCopy: passwordCopy)
 
     XCTAssertTrue(subject.failed)
   }

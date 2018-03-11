@@ -13,7 +13,7 @@
         <!--Navigation Controller-->
         <scene sceneID="7Ly-DD-jOT">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RYJ-PF-1BO" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigationController" automaticallyAdjustsScrollViewInsets="NO" id="RYJ-PF-1BO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Iy-Vf-58L">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -77,6 +77,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Product List" largeTitleDisplayMode="always" id="WdI-Tq-Et1">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="IhB-Ne-3RI"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="zpm-Xh-6va">
+                            <connections>
+                                <action selector="closeScanner:" destination="KiC-Et-egU" id="zRN-EU-7e8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="3ZB-xU-ehU">
                             <connections>
                                 <action selector="showScanner:" destination="KiC-Et-egU" id="eFJ-rW-ZRO"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VTr-Lc-ZUD">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -70,7 +70,6 @@
                                 <state key="normal" title="Registrar"/>
                                 <connections>
                                     <action selector="signInButton:" destination="vDn-tB-tjE" eventType="touchUpInside" id="VJ0-ZB-gEl"/>
-                                    <segue destination="rTd-mm-Ssp" kind="show" id="vbc-QB-Z0N"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -106,6 +105,7 @@
                     <connections>
                         <outlet property="emailField" destination="9ee-ct-Cm1" id="3As-7J-3cF"/>
                         <outlet property="passwordField" destination="eRy-zO-Mhz" id="cBR-Zi-K3p"/>
+                        <segue destination="rTd-mm-Ssp" kind="show" identifier="singInViewController" id="fTi-A4-S9m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3A9-Eg-ZYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -225,7 +225,7 @@
         <!--Navigation Controller-->
         <scene sceneID="JG8-eQ-smD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VTr-Lc-ZUD" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigationController" automaticallyAdjustsScrollViewInsets="NO" id="VTr-Lc-ZUD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P0s-Ih-7x4">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>

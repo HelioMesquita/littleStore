@@ -13,6 +13,12 @@ class ProductsViewController: UITableViewController, ProductLoadable {
     showScanner()
   }
 
+  @IBAction func closeScanner(_ sender: UIBarButtonItem) {
+    let storyboard = UIStoryboard(name: "Login", bundle: nil)
+    let viewController = storyboard.instantiateViewController(withIdentifier: "navigationController")
+    present(viewController, animated: true, completion: nil)
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
     title = "productsViewControllerTitle".localized

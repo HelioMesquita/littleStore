@@ -3,6 +3,10 @@ class User: Codable {
   var email: String
   var password: String
 
+  static var path: String {
+    return "storedUser.json"
+  }
+
   init(name: String, email: String, password: String) {
     self.name = name
     self.email = email

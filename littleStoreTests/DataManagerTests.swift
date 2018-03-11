@@ -53,6 +53,26 @@ class DataManagerTests: XCTestCase {
     XCTAssertEqual(products.count, 2)
   }
 
+  func testSaveUser() {
+    let user = User(name: "joao", email: "joao@joao.com.br", password: "123456")
+    DataManager.saveUser(user)
+    XCTAssertTrue(Disk.exists(User.path, in: .documents))
+  }
+
+  func testGetEmptyStoredUser() {
+    let user = DataManager.getStoredUser()
+    XCTAssertNil(user)
+  }
+
+  func testGetStoredUser() {
+    let user = User(name: "joao", email: "joao@joao.com.br", password: "123456")
+    DataManager.saveUser(user)
+    let userStored = DataManager.getStoredUser()!
+    XCTAssertEqual(user.name, userStored.name)
+    XCTAssertEqual(user.email, userStored.email)
+    XCTAssertEqual(user.password, userStored.password)
+  }
+
   override func tearDown() {
     super.tearDown()
     if Disk.exists(BarcodeList.barcodeListPath, in: .documents) {
@@ -63,6 +83,9 @@ class DataManagerTests: XCTestCase {
     }
     if Disk.exists(self.standardPath(appleId), in: .documents) {
       try! Disk.remove(self.standardPath(appleId), from: .documents)
+    }
+    if Disk.exists(User.path, in: .documents) {
+      try! Disk.remove(User.path, from: .documents)
     }
   }
 

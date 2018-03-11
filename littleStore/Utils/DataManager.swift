@@ -26,7 +26,27 @@ class DataManager {
       try Disk.save(product, to: .documents, as: product.path)
       try addProductInBarcodeList(id: product.id)
     } catch {
-      fatalError("impossible to save")
+      fatalError("impossible to save product")
+    }
+  }
+
+  static func saveUser(_ user: User) {
+    do {
+      try Disk.save(user, to: .documents, as: User.path)
+    } catch {
+      fatalError("impossible to save user")
+    }
+  }
+
+  static func getStoredUser() -> User? {
+    do {
+      if Disk.exists(User.path, in: .documents) {
+        return try Disk.retrieve(User.path, from: .documents, as: User.self)
+      } else {
+        return nil
+      }
+    } catch {
+      fatalError("impossible to check stored user")
     }
   }
 

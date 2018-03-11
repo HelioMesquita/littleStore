@@ -17,6 +17,9 @@
 		FD29AA7A2054B46500F595B2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29AA792054B46500F595B2 /* SignInViewController.swift */; };
 		FD29AA7C2054BA8100F595B2 /* SignInDataValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29AA7B2054BA8100F595B2 /* SignInDataValidator.swift */; };
 		FD29AA7E2054BAA900F595B2 /* SignInDataValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29AA7D2054BAA900F595B2 /* SignInDataValidatorTest.swift */; };
+		FD29AA802054BFA400F595B2 /* UserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29AA7F2054BFA400F595B2 /* UserTest.swift */; };
+		FD29AA822054C31800F595B2 /* SignUpProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29AA812054C31800F595B2 /* SignUpProtocol.swift */; };
+		FD29AA842054C6B500F595B2 /* SignUpProtocolTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29AA832054C6B500F595B2 /* SignUpProtocolTest.swift */; };
 		FD75B6C920537F68001B73B3 /* ProductCreateHandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6C820537F68001B73B3 /* ProductCreateHandable.swift */; };
 		FD75B6CB205382E2001B73B3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD75B6CA205382E2001B73B3 /* Localizable.strings */; };
 		FD75B6CD20538313001B73B3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6CC20538313001B73B3 /* StringExtension.swift */; };
@@ -71,6 +74,9 @@
 		FD29AA792054B46500F595B2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		FD29AA7B2054BA8100F595B2 /* SignInDataValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataValidator.swift; sourceTree = "<group>"; };
 		FD29AA7D2054BAA900F595B2 /* SignInDataValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataValidatorTest.swift; sourceTree = "<group>"; };
+		FD29AA7F2054BFA400F595B2 /* UserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTest.swift; sourceTree = "<group>"; };
+		FD29AA812054C31800F595B2 /* SignUpProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProtocol.swift; sourceTree = "<group>"; };
+		FD29AA832054C6B500F595B2 /* SignUpProtocolTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProtocolTest.swift; sourceTree = "<group>"; };
 		FD75B6C820537F68001B73B3 /* ProductCreateHandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCreateHandable.swift; sourceTree = "<group>"; };
 		FD75B6CA205382E2001B73B3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		FD75B6CC20538313001B73B3 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -187,26 +193,34 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		FD29AA852054DAC800F595B2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDBE779A2050A26F0023F5B5 /* Product.swift */,
+				FD29AA772054B30000F595B2 /* User.swift */,
+				FDB7971A2052200900E66C91 /* BarcodeList.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FD75B6C720537F5D001B73B3 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				FD75B6C820537F68001B73B3 /* ProductCreateHandable.swift */,
 				FD75B6CE205386E0001B73B3 /* ProductInsertProtocol.swift */,
 				FD29AA7B2054BA8100F595B2 /* SignInDataValidator.swift */,
+				FD29AA812054C31800F595B2 /* SignUpProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		FDB797152051F84F00E66C91 /* Commum */ = {
+		FDB797152051F84F00E66C91 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				FDBE779A2050A26F0023F5B5 /* Product.swift */,
 				FDB797162051F85F00E66C91 /* DataManager.swift */,
 				FDB797182052020E00E66C91 /* Alert.swift */,
-				FDB7971A2052200900E66C91 /* BarcodeList.swift */,
-				FD29AA772054B30000F595B2 /* User.swift */,
 			);
-			path = Commum;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		FDBE775F2050A2560023F5B5 = {
@@ -234,11 +248,12 @@
 		FDBE776A2050A2560023F5B5 /* littleStore */ = {
 			isa = PBXGroup;
 			children = (
-				FDB797152051F84F00E66C91 /* Commum */,
 				FDBE77A52050B9350023F5B5 /* Extensions */,
+				FD29AA852054DAC800F595B2 /* Models */,
 				FD75B6C720537F5D001B73B3 /* Protocols */,
 				FD29AA6F2053959C00F595B2 /* Storyboards */,
 				FD29AA70205395B200F595B2 /* SupportFiles */,
+				FDB797152051F84F00E66C91 /* Utils */,
 				FDBE77A82050BEB50023F5B5 /* ViewsController */,
 			);
 			path = littleStore;
@@ -252,6 +267,8 @@
 				FD17B5DC20535193001800F6 /* ProductTest.swift */,
 				FD75B6D02053871F001B73B3 /* ProductCreateHandableTest.swift */,
 				FD29AA7D2054BAA900F595B2 /* SignInDataValidatorTest.swift */,
+				FD29AA7F2054BFA400F595B2 /* UserTest.swift */,
+				FD29AA832054C6B500F595B2 /* SignUpProtocolTest.swift */,
 			);
 			path = littleStoreTests;
 			sourceTree = "<group>";
@@ -589,6 +606,7 @@
 				FD75B6CF205386E0001B73B3 /* ProductInsertProtocol.swift in Sources */,
 				FDBE77A42050B4710023F5B5 /* ProductDetailViewController.swift in Sources */,
 				FDB797172051F85F00E66C91 /* DataManager.swift in Sources */,
+				FD29AA822054C31800F595B2 /* SignUpProtocol.swift in Sources */,
 				FDBE77A72050B9550023F5B5 /* NSNumberExtension.swift in Sources */,
 				FD75B6C920537F68001B73B3 /* ProductCreateHandable.swift in Sources */,
 				FDBE776C2050A2560023F5B5 /* AppDelegate.swift in Sources */,
@@ -608,6 +626,8 @@
 				FDBE779E2050A3A80023F5B5 /* DataManagerTests.swift in Sources */,
 				FD75B6D12053871F001B73B3 /* ProductCreateHandableTest.swift in Sources */,
 				FD17B5DD20535193001800F6 /* ProductTest.swift in Sources */,
+				FD29AA802054BFA400F595B2 /* UserTest.swift in Sources */,
+				FD29AA842054C6B500F595B2 /* SignUpProtocolTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
