@@ -9,3 +9,4 @@
 "productsViewControllerTitle" = "Produtos Cadastrados";
 "productDetailViewControllerTitle" = "Detalhe do Produto";
 "barcodeView" = "Leitor";
+"signinViewController" = "Inscreva-se";

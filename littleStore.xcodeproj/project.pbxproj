@@ -11,6 +11,12 @@
 		7BD8B2285017FA54EC009863 /* Pods_littleStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C14E605D7AB597E47FA0BEC3 /* Pods_littleStore.framework */; };
 		CCFFA0D1F68558C722220F18 /* Pods_littleStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02901E189DF310B06B323367 /* Pods_littleStoreTests.framework */; };
 		FD17B5DD20535193001800F6 /* ProductTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD17B5DC20535193001800F6 /* ProductTest.swift */; };
+		FD29AA722054AD3800F595B2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD29AA712054AD3800F595B2 /* Login.storyboard */; };
+		FD29AA762054B2D800F595B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29AA752054B2D800F595B2 /* LoginViewController.swift */; };
+		FD29AA782054B30000F595B2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29AA772054B30000F595B2 /* User.swift */; };
+		FD29AA7A2054B46500F595B2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29AA792054B46500F595B2 /* SignInViewController.swift */; };
+		FD29AA7C2054BA8100F595B2 /* SignInDataValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29AA7B2054BA8100F595B2 /* SignInDataValidator.swift */; };
+		FD29AA7E2054BAA900F595B2 /* SignInDataValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29AA7D2054BAA900F595B2 /* SignInDataValidatorTest.swift */; };
 		FD75B6C920537F68001B73B3 /* ProductCreateHandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6C820537F68001B73B3 /* ProductCreateHandable.swift */; };
 		FD75B6CB205382E2001B73B3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD75B6CA205382E2001B73B3 /* Localizable.strings */; };
 		FD75B6CD20538313001B73B3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6CC20538313001B73B3 /* StringExtension.swift */; };
@@ -59,6 +65,12 @@
 		CBBC7BEDB30DEE9B28390024 /* Pods-littleStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-littleStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-littleStore/Pods-littleStore.release.xcconfig"; sourceTree = "<group>"; };
 		E3F195BC477DF422115A07CF /* Pods-littleStoreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-littleStoreUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-littleStoreUITests/Pods-littleStoreUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FD17B5DC20535193001800F6 /* ProductTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTest.swift; sourceTree = "<group>"; };
+		FD29AA712054AD3800F595B2 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		FD29AA752054B2D800F595B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FD29AA772054B30000F595B2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FD29AA792054B46500F595B2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		FD29AA7B2054BA8100F595B2 /* SignInDataValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataValidator.swift; sourceTree = "<group>"; };
+		FD29AA7D2054BAA900F595B2 /* SignInDataValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataValidatorTest.swift; sourceTree = "<group>"; };
 		FD75B6C820537F68001B73B3 /* ProductCreateHandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCreateHandable.swift; sourceTree = "<group>"; };
 		FD75B6CA205382E2001B73B3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		FD75B6CC20538313001B73B3 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -141,6 +153,7 @@
 			children = (
 				FDBE776F2050A2560023F5B5 /* Main.storyboard */,
 				FDBE77742050A2560023F5B5 /* LaunchScreen.storyboard */,
+				FD29AA712054AD3800F595B2 /* Login.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -156,11 +169,30 @@
 			path = SupportFiles;
 			sourceTree = "<group>";
 		};
+		FD29AA732054B2A000F595B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDBE776D2050A2560023F5B5 /* ProductsViewController.swift */,
+				FDBE77A32050B4710023F5B5 /* ProductDetailViewController.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		FD29AA742054B2AC00F595B2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FD29AA752054B2D800F595B2 /* LoginViewController.swift */,
+				FD29AA792054B46500F595B2 /* SignInViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		FD75B6C720537F5D001B73B3 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				FD75B6C820537F68001B73B3 /* ProductCreateHandable.swift */,
 				FD75B6CE205386E0001B73B3 /* ProductInsertProtocol.swift */,
+				FD29AA7B2054BA8100F595B2 /* SignInDataValidator.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -172,6 +204,7 @@
 				FDB797162051F85F00E66C91 /* DataManager.swift */,
 				FDB797182052020E00E66C91 /* Alert.swift */,
 				FDB7971A2052200900E66C91 /* BarcodeList.swift */,
+				FD29AA772054B30000F595B2 /* User.swift */,
 			);
 			path = Commum;
 			sourceTree = "<group>";
@@ -218,6 +251,7 @@
 				FDBE779D2050A3A80023F5B5 /* DataManagerTests.swift */,
 				FD17B5DC20535193001800F6 /* ProductTest.swift */,
 				FD75B6D02053871F001B73B3 /* ProductCreateHandableTest.swift */,
+				FD29AA7D2054BAA900F595B2 /* SignInDataValidatorTest.swift */,
 			);
 			path = littleStoreTests;
 			sourceTree = "<group>";
@@ -243,8 +277,8 @@
 		FDBE77A82050BEB50023F5B5 /* ViewsController */ = {
 			isa = PBXGroup;
 			children = (
-				FDBE776D2050A2560023F5B5 /* ProductsViewController.swift */,
-				FDBE77A32050B4710023F5B5 /* ProductDetailViewController.swift */,
+				FD29AA742054B2AC00F595B2 /* Login */,
+				FD29AA732054B2A000F595B2 /* Products */,
 			);
 			path = ViewsController;
 			sourceTree = "<group>";
@@ -368,6 +402,7 @@
 				FDBE77762050A2560023F5B5 /* LaunchScreen.storyboard in Resources */,
 				FD75B6CB205382E2001B73B3 /* Localizable.strings in Resources */,
 				FDBE77732050A2560023F5B5 /* Assets.xcassets in Resources */,
+				FD29AA722054AD3800F595B2 /* Login.storyboard in Resources */,
 				FDBE77712050A2560023F5B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,6 +582,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD29AA7C2054BA8100F595B2 /* SignInDataValidator.swift in Sources */,
+				FD29AA7A2054B46500F595B2 /* SignInViewController.swift in Sources */,
+				FD29AA762054B2D800F595B2 /* LoginViewController.swift in Sources */,
 				FDBE776E2050A2560023F5B5 /* ProductsViewController.swift in Sources */,
 				FD75B6CF205386E0001B73B3 /* ProductInsertProtocol.swift in Sources */,
 				FDBE77A42050B4710023F5B5 /* ProductDetailViewController.swift in Sources */,
@@ -554,6 +592,7 @@
 				FDBE77A72050B9550023F5B5 /* NSNumberExtension.swift in Sources */,
 				FD75B6C920537F68001B73B3 /* ProductCreateHandable.swift in Sources */,
 				FDBE776C2050A2560023F5B5 /* AppDelegate.swift in Sources */,
+				FD29AA782054B30000F595B2 /* User.swift in Sources */,
 				FDB797192052020E00E66C91 /* Alert.swift in Sources */,
 				FDB7971B2052200900E66C91 /* BarcodeList.swift in Sources */,
 				FD75B6CD20538313001B73B3 /* StringExtension.swift in Sources */,
@@ -565,6 +604,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD29AA7E2054BAA900F595B2 /* SignInDataValidatorTest.swift in Sources */,
 				FDBE779E2050A3A80023F5B5 /* DataManagerTests.swift in Sources */,
 				FD75B6D12053871F001B73B3 /* ProductCreateHandableTest.swift in Sources */,
 				FD17B5DD20535193001800F6 /* ProductTest.swift in Sources */,
