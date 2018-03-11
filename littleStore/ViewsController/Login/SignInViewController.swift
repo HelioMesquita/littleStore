@@ -19,7 +19,7 @@ class SignInViewController: UIViewController, SignInDataValidator {
   }
 
   func onSuccess(_ user: User) {
-    DataManager.saveUser(user)
+    StoragedDataManager.saveUser(user)
     self.delegate?.performLogin()
   }
 

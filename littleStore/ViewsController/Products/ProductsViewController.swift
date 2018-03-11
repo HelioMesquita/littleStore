@@ -54,7 +54,7 @@ class ProductsViewController: UITableViewController, ProductLoadable {
   }
 
   func loadProducts() {
-    self.products = DataManager.selectAllProducts()
+    self.products = StoragedDataManager.selectAllProducts()
   }
 }
 
@@ -72,7 +72,7 @@ extension ProductsViewController: BarcodeScannerCodeDelegate, ProductCreateHanda
   func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
     AlertDefault.productAlert(with: code, viewController: controller) { name, price in
       self.handleProductAttributes(id: code, name: name, price: price, onSaved: { product in
-        DataManager.saveProduct(product)
+        StoragedDataManager.saveProduct(product)
         self.loadProducts()
         controller.navigationController?.popViewController(animated: true)
       }, onFail: {

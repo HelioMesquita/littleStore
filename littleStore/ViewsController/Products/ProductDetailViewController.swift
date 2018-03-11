@@ -11,7 +11,7 @@ class ProductsDetailViewController: UIViewController, ProductCreateHandable {
   
   @IBAction func changeValues(_ sender: Any) {
     handleProductAttributes(id: idField.text, name: nameField.text, price: priceField.text, onSaved: { updatedProduct in
-      DataManager.updateProduct(where: product!, updatedProduct: updatedProduct)
+      StoragedDataManager.updateProduct(where: product!, updatedProduct: updatedProduct)
       self.delegate?.loadProducts()
       self.navigationController?.popViewController(animated: true)
     }, onFail: {

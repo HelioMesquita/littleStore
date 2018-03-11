@@ -1,6 +1,6 @@
 import Disk
 
-class DataManager {
+class StoragedDataManager {
 
   static func saveUser(_ user: User) {
     do {
