@@ -100,7 +100,7 @@ class DataManager {
   }
 
   private static func createEmptyProductList() throws {
-    let productList = ProductList(ids: [String](), products: [Product]())
+    let productList = ProductList(products: [Product]())
     try saveProductList(productList)
   }
 }
