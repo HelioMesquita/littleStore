@@ -38,14 +38,10 @@ class StoragedDataManager {
   static func saveProduct(_ product: Product) {
     do {
       if existProductList() {
-        var productList = try getProductList()
-        productList.products.append(product)
-        try saveProductList(productList)
+        try appendProductInList(product: product)
       } else {
         try createEmptyProductList()
-        var productList = try getProductList()
-        productList.products.append(product)
-        try saveProductList(productList)
+        try appendProductInList(product: product)
       }
     } catch {
       fatalError("impossible to save product")
@@ -63,9 +59,7 @@ class StoragedDataManager {
         try saveProductList(productList)
       } else {
         try createEmptyProductList()
-        var productList = try getProductList()
-        productList.products.append(product)
-        try saveProductList(productList)
+        try appendProductInList(product: product)
       }
     } catch {
       fatalError("impossible to update")
@@ -85,6 +79,12 @@ class StoragedDataManager {
     } catch {
       fatalError("impossible select product")
     }
+  }
+
+  private static func appendProductInList(product: Product) throws {
+    var productList = try getProductList()
+    productList.products.append(product)
+    try saveProductList(productList)
   }
 
   private static func existProductList() -> Bool {

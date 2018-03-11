@@ -26,7 +26,7 @@
 		FD75B6CD20538313001B73B3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6CC20538313001B73B3 /* StringExtension.swift */; };
 		FD75B6CF205386E0001B73B3 /* ProductInsertProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6CE205386E0001B73B3 /* ProductInsertProtocol.swift */; };
 		FD75B6D12053871F001B73B3 /* ProductCreateHandableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6D02053871F001B73B3 /* ProductCreateHandableTest.swift */; };
-		FDB797172051F85F00E66C91 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB797162051F85F00E66C91 /* DataManager.swift */; };
+		FDB797172051F85F00E66C91 /* StoragedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB797162051F85F00E66C91 /* StoragedDataManager.swift */; };
 		FDB797192052020E00E66C91 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB797182052020E00E66C91 /* Alert.swift */; };
 		FDB7971B2052200900E66C91 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7971A2052200900E66C91 /* ProductList.swift */; };
 		FDBE776C2050A2560023F5B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE776B2050A2560023F5B5 /* AppDelegate.swift */; };
@@ -84,7 +84,7 @@
 		FD75B6CC20538313001B73B3 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		FD75B6CE205386E0001B73B3 /* ProductInsertProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInsertProtocol.swift; sourceTree = "<group>"; };
 		FD75B6D02053871F001B73B3 /* ProductCreateHandableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCreateHandableTest.swift; sourceTree = "<group>"; };
-		FDB797162051F85F00E66C91 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		FDB797162051F85F00E66C91 /* StoragedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoragedDataManager.swift; sourceTree = "<group>"; };
 		FDB797182052020E00E66C91 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		FDB7971A2052200900E66C91 /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		FDBE77682050A2560023F5B5 /* littleStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = littleStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,7 +219,7 @@
 		FDB797152051F84F00E66C91 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				FDB797162051F85F00E66C91 /* DataManager.swift */,
+				FDB797162051F85F00E66C91 /* StoragedDataManager.swift */,
 				FDB797182052020E00E66C91 /* Alert.swift */,
 			);
 			path = Utils;
@@ -608,7 +608,7 @@
 				FDBE776E2050A2560023F5B5 /* ProductsViewController.swift in Sources */,
 				FD75B6CF205386E0001B73B3 /* ProductInsertProtocol.swift in Sources */,
 				FDBE77A42050B4710023F5B5 /* ProductDetailViewController.swift in Sources */,
-				FDB797172051F85F00E66C91 /* DataManager.swift in Sources */,
+				FDB797172051F85F00E66C91 /* StoragedDataManager.swift in Sources */,
 				FD29AA822054C31800F595B2 /* SignUpProtocol.swift in Sources */,
 				FDBE77A72050B9550023F5B5 /* NSNumberExtension.swift in Sources */,
 				FD75B6C920537F68001B73B3 /* ProductCreateHandable.swift in Sources */,
