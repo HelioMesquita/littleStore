@@ -28,15 +28,12 @@ class ProductsUITests: XCTestCase {
     let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
     let textField = element.children(matching: .textField).element(boundBy: 1)
     textField.tap()
+    textField.buttons["Limpar texto"].tap()
     textField.typeText("6000")
-    
-    let textField2 = element.children(matching: .textField).element(boundBy: 2)
-    textField2.tap()
-    textField2.typeText("123")
+
     app.buttons["Alterar"].tap()
     
     let navBar = app.navigationBars["Detalhe do Produto"]
     XCTAssertTrue(navBar.exists, "Detalhe do Produto")
   }
 }
-
