@@ -2,34 +2,6 @@ import Disk
 
 class DataManager {
 
-  static func getProducts() -> [Product] {
-    do {
-      if existBarcodeList() {
-        let barcodeList = try getBarcodeList()
-
-        var products = [Product]()
-        for id in barcodeList.ids {
-          products.append(selectProductBy(id))
-        }
-
-        return products
-      } else {
-        return [Product]()
-      }
-    } catch {
-      fatalError("barlist not available")
-    }
-  }
-
-  static func saveProduct(_ product: Product) {
-    do {
-      try Disk.save(product, to: .documents, as: product.path)
-      try addProductInBarcodeList(id: product.id)
-    } catch {
-      fatalError("impossible to save product")
-    }
-  }
-
   static func saveUser(_ user: User) {
     do {
       try Disk.save(user, to: .documents, as: User.path)
@@ -50,50 +22,85 @@ class DataManager {
     }
   }
 
+  static func selectAllProducts() -> [Product] {
+    do {
+      if existProductList() {
+        let productList = try getProductList()
+        return productList.products
+      } else {
+        return [Product]()
+      }
+    } catch {
+      fatalError("product list not available")
+    }
+  }
+
+  static func saveProduct(_ product: Product) {
+    do {
+      if existProductList() {
+        var productList = try getProductList()
+        productList.products.append(product)
+        try saveProductList(productList)
+      } else {
+        try createEmptyProductList()
+        var productList = try getProductList()
+        productList.products.append(product)
+        try saveProductList(productList)
+      }
+    } catch {
+      fatalError("impossible to save product")
+    }
+  }
+
   static func updateProduct(where product: Product, updatedProduct: Product) {
     do {
-      try Disk.remove(product.path, from: .documents)
-      var barcodeList = try getBarcodeList()
-      barcodeList.ids = barcodeList.ids.filter({ id -> Bool in
-        id != product.id
-      })
-      barcodeList.ids.append(updatedProduct.id)
-      barcodeList.ids = Array(Set(barcodeList.ids))
-      try saveBarcodeList(barcodeList)
-      saveProduct(updatedProduct)
+      if existProductList() {
+        var productList = try getProductList()
+        productList.products = productList.products.filter({ (productStored) -> Bool in
+          productStored.id != product.id
+        })
+        productList.products.append(updatedProduct)
+        try saveProductList(productList)
+      } else {
+        try createEmptyProductList()
+        var productList = try getProductList()
+        productList.products.append(product)
+        try saveProductList(productList)
+      }
     } catch {
       fatalError("impossible to update")
     }
   }
 
-  static func selectProductBy(_ id: String) -> Product {
+  static func selectProductBy(id: String) -> Product? {
     do {
-      return try Disk.retrieve("products/\(id).json", from: .documents, as: Product.self)
+      if existProductList() {
+        let productList = try getProductList()
+        return productList.products.first(where: { (product) -> Bool in
+          product.id == id
+        })
+      } else {
+        return nil
+      }
     } catch {
-      fatalError("json not founded")
+      fatalError("impossible select product")
     }
   }
 
-  private static func addProductInBarcodeList(id: String) throws {
-    if existBarcodeList() {
-      var barcodeList = try getBarcodeList()
-      barcodeList.ids.append(id)
-      barcodeList.ids = Array(Set(barcodeList.ids))
-      try saveBarcodeList(barcodeList)
-    } else {
-      try saveBarcodeList(BarcodeList(ids: [id]))
-    }
+  private static func existProductList() -> Bool {
+    return Disk.exists(ProductList.path, in: .documents)
   }
 
-  private static func existBarcodeList() -> Bool {
-    return Disk.exists(BarcodeList.barcodeListPath, in: .documents)
+  private static func getProductList() throws -> ProductList {
+    return try Disk.retrieve(ProductList.path, from: .documents, as: ProductList.self)
   }
 
-  private static func getBarcodeList() throws -> BarcodeList {
-    return try Disk.retrieve(BarcodeList.barcodeListPath, from: .documents, as: BarcodeList.self)
+  private static func saveProductList(_ list: ProductList) throws {
+    try Disk.save(list, to: .documents, as: ProductList.path)
   }
 
-  private static func saveBarcodeList(_ list: BarcodeList) throws {
-    try Disk.save(list, to: .documents, as: BarcodeList.barcodeListPath)
+  private static func createEmptyProductList() throws {
+    let productList = ProductList(ids: [String](), products: [Product]())
+    try saveProductList(productList)
   }
 }

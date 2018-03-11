@@ -5,10 +5,6 @@ class Product: Codable {
   private(set) var name: String
   private(set) var price: Float
 
-  var path: String {
-    return "products/\(id).json"
-  }
-
   init(id: String, name: String, price: Float) {
     self.id = id
     self.name = name

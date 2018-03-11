@@ -54,7 +54,7 @@ class ProductsViewController: UITableViewController, ProductLoadable {
   }
 
   func loadProducts() {
-    self.products = DataManager.getProducts()
+    self.products = DataManager.selectAllProducts()
   }
 }
 

@@ -13,19 +13,20 @@ class DataManagerTests: XCTestCase {
   }
 
   func testSaveProduct() {
-    let product1 = Product(id: bananaId, name: "banana", price: 10.0)
-    DataManager.saveProduct(product1)
-    XCTAssertTrue(Disk.exists(self.standardPath(bananaId) , in: .documents))
+    let product = Product(id: bananaId, name: "banana", price: 10.0)
+    DataManager.saveProduct(product)
+    let storedProduct = DataManager.selectProductBy(id: bananaId)
+    XCTAssertNotNil(storedProduct, "finded product stored in products list")
   }
 
   func testSelectProductSaved() {
-    let product1 = Product(id: bananaId, name: "banana", price: 10.0)
-    DataManager.saveProduct(product1)
+    let product = Product(id: bananaId, name: "banana", price: 10.0)
+    DataManager.saveProduct(product)
 
-    let product = DataManager.selectProductBy(bananaId)
-    XCTAssertEqual(product.name, "banana")
-    XCTAssertEqual(product.price, 10.0)
-    XCTAssertEqual(product.id, "1")
+    let storedProduct = DataManager.selectProductBy(id: bananaId)
+    XCTAssertEqual(storedProduct!.name, "banana")
+    XCTAssertEqual(storedProduct!.price, 10.0)
+    XCTAssertEqual(storedProduct!.id, "1")
   }
 
   func testUpdateProductSaved() {
@@ -35,14 +36,14 @@ class DataManagerTests: XCTestCase {
     let updatedProduct = Product(id: appleId, name: "maca", price: 20.0)
     DataManager.updateProduct(where: product1, updatedProduct: updatedProduct)
 
-    let product = DataManager.selectProductBy(appleId)
-    XCTAssertEqual(product.name, "maca")
-    XCTAssertEqual(product.price, 20)
-    XCTAssertEqual(product.id, appleId)
+    let storedProduct = DataManager.selectProductBy(id: appleId)
+    XCTAssertEqual(storedProduct!.name, "maca")
+    XCTAssertEqual(storedProduct!.price, 20)
+    XCTAssertEqual(storedProduct!.id, appleId)
   }
 
   func testRetriveEmptyProductsList() {
-    let products = DataManager.getProducts()
+    let products = DataManager.selectAllProducts()
     XCTAssertTrue(products.isEmpty)
   }
 
@@ -53,7 +54,7 @@ class DataManagerTests: XCTestCase {
     DataManager.saveProduct(product1)
     DataManager.saveProduct(product2)
 
-    let products = DataManager.getProducts()
+    let products = DataManager.selectAllProducts()
     XCTAssertTrue(!products.isEmpty)
     XCTAssertEqual(products.count, 2)
   }
@@ -84,22 +85,11 @@ class DataManagerTests: XCTestCase {
   }
 
   func reset() {
-    if Disk.exists(BarcodeList.barcodeListPath, in: .documents) {
-      try! Disk.remove(BarcodeList.barcodeListPath, from: .documents)
-    }
-    if Disk.exists(self.standardPath(bananaId), in: .documents) {
-      try! Disk.remove(self.standardPath(bananaId), from: .documents)
-    }
-    if Disk.exists(self.standardPath(appleId), in: .documents) {
-      try! Disk.remove(self.standardPath(appleId), from: .documents)
+    if Disk.exists(ProductList.path, in: .documents) {
+      try! Disk.remove(ProductList.path, from: .documents)
     }
     if Disk.exists(User.path, in: .documents) {
       try! Disk.remove(User.path, from: .documents)
     }
   }
-
-  func standardPath(_ id: String) -> String {
-    return "products/\(id).json"
-  }
 }
-
