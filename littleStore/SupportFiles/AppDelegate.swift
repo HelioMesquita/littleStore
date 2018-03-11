@@ -20,17 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }
     }
     if CommandLine.arguments.contains("alreadyRegistered") {
-      DataManager.saveUser(User(name: "Marcela", email: "marcela@marcela.com.br", password: "1234567"))
+      StoragedDataManager.saveUser(User(name: "Marcela", email: "marcela@marcela.com.br", password: "1234567"))
     }
     if CommandLine.arguments.contains("editingProduct") {
-      if Disk.exists("products/12345678.json", in: .documents) {
-        try! Disk.remove("products/12345678.json", from: .documents)
+      if Disk.exists(ProductList.path, in: .documents) {
+        try! Disk.remove(ProductList.path, from: .documents)
       }
-      if Disk.exists("barcodeListPath.json", in: .documents) {
-        try! Disk.remove("barcodeListPath.json", from: .documents)
-      }
-      DataManager.saveProduct(Product(id: "123456789101112", name: "iPhone X", price: 5500))
+      StoragedDataManager.saveProduct(Product(id: "123456789101112", name: "iPhone X", price: 5500))
     }
   }
 }
-

@@ -5,7 +5,7 @@ class LoginViewController: UIViewController, SignUpProtocol {
   @IBOutlet weak var emailField: UITextField!
   @IBOutlet weak var passwordField: UITextField!
   @IBAction func signUpButton(_ sender: UIButton) {
-    prepareForLogin(emailField: emailField.text, passwordField: passwordField.text, userStored: DataManager.getStoredUser())
+    prepareForLogin(emailField: emailField.text, passwordField: passwordField.text, userStored: StoragedDataManager.getStoredUser())
   }
 
   @IBAction func signInButton(_ sender: UIButton) {
@@ -14,7 +14,7 @@ class LoginViewController: UIViewController, SignUpProtocol {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    let user = DataManager.getStoredUser()
+    let user = StoragedDataManager.getStoredUser()
     emailField.text = user?.email
     passwordField.text = user?.password
   }
