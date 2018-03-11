@@ -10,30 +10,30 @@ class ProductsUITests: XCTestCase {
     app.launchArguments.append("alreadyRegistered")
   }
 
-  func testOpenEdidProdutViewController() {
+  func testOpenProdutDetailViewController() {
     app.launchArguments.append("editingProduct")
     app.launch()
     app.buttons["Entrar"].tap()
-    app.tables/*@START_MENU_TOKEN@*/.staticTexts["Iphone X"]/*[[".cells.staticTexts[\"Iphone X\"]",".staticTexts[\"Iphone X\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    app.tables.cells.staticTexts["123456789101112"].tap()
     let navBar = app.navigationBars["Detalhe do Produto"]
     XCTAssertTrue(navBar.exists, "Detalhe do Produto")
   }
 
-  func testEdidProdutDetailsViewController() {
+  func testEditingProdutDetailsViewController() {
     app.launchArguments.append("editingProduct")
     app.launch()
     app.buttons["Entrar"].tap()
-    app.tables/*@START_MENU_TOKEN@*/.staticTexts["Iphone X"]/*[[".cells.staticTexts[\"Iphone X\"]",".staticTexts[\"Iphone X\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    app.tables.cells.staticTexts["123456789101112"].tap()
 
     let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
-    let textField = element.children(matching: .textField).element(boundBy: 1)
+    let textField = element.children(matching: .textField).element(boundBy: 2)
     textField.tap()
     textField.buttons["Limpar texto"].tap()
-    textField.typeText("6000")
+    textField.typeText("12345678")
     app.toolbars.buttons["Toolbar Done Button"].tap()
     app.buttons["Alterar"].tap()
-    
-    let navBar = app.navigationBars["Produtos Cadastrados"]
-    XCTAssertTrue(navBar.exists, "Produtos Cadastrados")
+
+    let cell = app.tables.cells.staticTexts["12345678"]
+    XCTAssertTrue(cell.exists, "field id in cell")
   }
 }
