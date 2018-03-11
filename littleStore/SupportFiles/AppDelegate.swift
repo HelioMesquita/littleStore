@@ -9,8 +9,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     IQKeyboardManager.sharedManager().enable = true
-    DataManager.saveProduct(Product(id: "123456789101112", name: "iPhone X", price: 5500))
-    DataManager.saveUser(User(name: "Marcela", email: "marcela@marcela.com.br", password: "1234567"))
     argumentsForUITest ()
     return true
   }

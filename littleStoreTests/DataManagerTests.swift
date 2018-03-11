@@ -32,8 +32,8 @@ class DataManagerTests: XCTestCase {
     let product1 = Product(id: bananaId, name: "banana", price: 10.0)
     DataManager.saveProduct(product1)
 
-    let product2 = Product(id: appleId, name: "maca", price: 20.0)
-    DataManager.updateProduct(where: product1, toProduct: product2)
+    let updatedProduct = Product(id: appleId, name: "maca", price: 20.0)
+    DataManager.updateProduct(where: product1, updatedProduct: updatedProduct)
 
     let product = DataManager.selectProductBy(appleId)
     XCTAssertEqual(product.name, "maca")

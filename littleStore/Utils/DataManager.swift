@@ -50,11 +50,17 @@ class DataManager {
     }
   }
 
-  static func updateProduct(where product: Product, toProduct: Product) {
+  static func updateProduct(where product: Product, updatedProduct: Product) {
     do {
       try Disk.remove(product.path, from: .documents)
-      try Disk.save(toProduct, to: .documents, as: toProduct.path)
-      try addProductInBarcodeList(id: toProduct.id)
+      var barcodeList = try getBarcodeList()
+      barcodeList.ids = barcodeList.ids.filter({ id -> Bool in
+        id != product.id
+      })
+      barcodeList.ids.append(updatedProduct.id)
+      barcodeList.ids = Array(Set(barcodeList.ids))
+      try saveBarcodeList(barcodeList)
+      saveProduct(updatedProduct)
     } catch {
       fatalError("impossible to update")
     }

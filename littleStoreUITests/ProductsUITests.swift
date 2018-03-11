@@ -30,10 +30,10 @@ class ProductsUITests: XCTestCase {
     textField.tap()
     textField.buttons["Limpar texto"].tap()
     textField.typeText("6000")
-
+    app.toolbars.buttons["Toolbar Done Button"].tap()
     app.buttons["Alterar"].tap()
     
-    let navBar = app.navigationBars["Detalhe do Produto"]
-    XCTAssertTrue(navBar.exists, "Detalhe do Produto")
+    let navBar = app.navigationBars["Produtos Cadastrados"]
+    XCTAssertTrue(navBar.exists, "Produtos Cadastrados")
   }
 }
