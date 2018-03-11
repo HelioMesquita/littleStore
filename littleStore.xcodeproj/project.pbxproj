@@ -20,6 +20,7 @@
 		FD29AA802054BFA400F595B2 /* UserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29AA7F2054BFA400F595B2 /* UserTest.swift */; };
 		FD29AA822054C31800F595B2 /* SignUpProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29AA812054C31800F595B2 /* SignUpProtocol.swift */; };
 		FD29AA842054C6B500F595B2 /* SignUpProtocolTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29AA832054C6B500F595B2 /* SignUpProtocolTest.swift */; };
+		FD29AA872054E55D00F595B2 /* ProductsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29AA862054E55D00F595B2 /* ProductsUITests.swift */; };
 		FD75B6C920537F68001B73B3 /* ProductCreateHandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6C820537F68001B73B3 /* ProductCreateHandable.swift */; };
 		FD75B6CB205382E2001B73B3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD75B6CA205382E2001B73B3 /* Localizable.strings */; };
 		FD75B6CD20538313001B73B3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75B6CC20538313001B73B3 /* StringExtension.swift */; };
@@ -33,7 +34,7 @@
 		FDBE77712050A2560023F5B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBE776F2050A2560023F5B5 /* Main.storyboard */; };
 		FDBE77732050A2560023F5B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDBE77722050A2560023F5B5 /* Assets.xcassets */; };
 		FDBE77762050A2560023F5B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBE77742050A2560023F5B5 /* LaunchScreen.storyboard */; };
-		FDBE778C2050A2560023F5B5 /* littleStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE778B2050A2560023F5B5 /* littleStoreUITests.swift */; };
+		FDBE778C2050A2560023F5B5 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE778B2050A2560023F5B5 /* LoginUITests.swift */; };
 		FDBE779B2050A26F0023F5B5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE779A2050A26F0023F5B5 /* Product.swift */; };
 		FDBE779E2050A3A80023F5B5 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE779D2050A3A80023F5B5 /* DataManagerTests.swift */; };
 		FDBE77A42050B4710023F5B5 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE77A32050B4710023F5B5 /* ProductDetailViewController.swift */; };
@@ -77,6 +78,7 @@
 		FD29AA7F2054BFA400F595B2 /* UserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTest.swift; sourceTree = "<group>"; };
 		FD29AA812054C31800F595B2 /* SignUpProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProtocol.swift; sourceTree = "<group>"; };
 		FD29AA832054C6B500F595B2 /* SignUpProtocolTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProtocolTest.swift; sourceTree = "<group>"; };
+		FD29AA862054E55D00F595B2 /* ProductsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsUITests.swift; sourceTree = "<group>"; };
 		FD75B6C820537F68001B73B3 /* ProductCreateHandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCreateHandable.swift; sourceTree = "<group>"; };
 		FD75B6CA205382E2001B73B3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		FD75B6CC20538313001B73B3 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -95,7 +97,7 @@
 		FDBE777C2050A2560023F5B5 /* littleStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = littleStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBE77822050A2560023F5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDBE77872050A2560023F5B5 /* littleStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = littleStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDBE778B2050A2560023F5B5 /* littleStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = littleStoreUITests.swift; sourceTree = "<group>"; };
+		FDBE778B2050A2560023F5B5 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
 		FDBE778D2050A2560023F5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDBE779A2050A26F0023F5B5 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		FDBE779D2050A3A80023F5B5 /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
@@ -276,7 +278,8 @@
 		FDBE778A2050A2560023F5B5 /* littleStoreUITests */ = {
 			isa = PBXGroup;
 			children = (
-				FDBE778B2050A2560023F5B5 /* littleStoreUITests.swift */,
+				FDBE778B2050A2560023F5B5 /* LoginUITests.swift */,
+				FD29AA862054E55D00F595B2 /* ProductsUITests.swift */,
 				FDBE778D2050A2560023F5B5 /* Info.plist */,
 			);
 			path = littleStoreUITests;
@@ -635,7 +638,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDBE778C2050A2560023F5B5 /* littleStoreUITests.swift in Sources */,
+				FDBE778C2050A2560023F5B5 /* LoginUITests.swift in Sources */,
+				FD29AA872054E55D00F595B2 /* ProductsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

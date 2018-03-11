@@ -7,6 +7,11 @@ class DataManagerTests: XCTestCase {
   private let bananaId: String = "1"
   private let appleId: String = "2"
 
+  override func setUp() {
+    super.setUp()
+    reset()
+  }
+
   func testSaveProduct() {
     let product1 = Product(id: bananaId, name: "banana", price: 10.0)
     DataManager.saveProduct(product1)
@@ -75,6 +80,10 @@ class DataManagerTests: XCTestCase {
 
   override func tearDown() {
     super.tearDown()
+    reset()
+  }
+
+  func reset() {
     if Disk.exists(BarcodeList.barcodeListPath, in: .documents) {
       try! Disk.remove(BarcodeList.barcodeListPath, from: .documents)
     }

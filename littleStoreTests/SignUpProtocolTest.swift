@@ -4,15 +4,8 @@ import XCTest
 class SignInProtocolTest: XCTestCase {
 
   class DummySigUp: SignUpProtocol {
-    var isUserRegistred = false
     var perfomadedLogin = false
     var loginFailed = false
-    var user: User?
-
-    func userRegistred(_ user: User) {
-      isUserRegistred = true
-      self.user = user
-    }
 
     func performLogin() {
       perfomadedLogin = true
