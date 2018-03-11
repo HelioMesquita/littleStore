@@ -20,5 +20,4 @@ class ProductCreateHandableTest: XCTestCase, ProductCreateHandable {
       XCTAssertTrue(true, "fail when created")
     })
   }
-
 }
