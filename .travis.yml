@@ -1,5 +1,6 @@
 language: objective-c
 osx_image: xcode9.2
-xcode_workspace: littleStore.xcworkspace
-xcode_scheme: littleStore
+# xcode_workspace: littleStore.xcworkspace
+# xcode_scheme: littleStore
+    - xcodebuild clean test -project littleStore.xcworkspace -scheme littleStore -destination "platform=iOS Simulator,name=iPhone 7,OS=10.3" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
 
