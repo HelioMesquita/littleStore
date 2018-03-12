@@ -14,20 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDBE77672050A2560023F5B5"
-               BuildableName = "littleStore.app"
-               BlueprintName = "littleStore"
-               ReferencedContainer = "container:littleStore.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "FCFF857B29A61E3BCDA7C64D9C616D21"
                BuildableName = "BarcodeScanner.framework"
                BlueprintName = "BarcodeScanner"
@@ -70,6 +56,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1691E754022217B52671D98A23731A08"
+               BuildableName = "Disk.framework"
+               BlueprintName = "Disk"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "C235F77E101E742652CCF98FFDFA5182"
                BuildableName = "IQKeyboardManagerSwift.framework"
                BlueprintName = "IQKeyboardManagerSwift"
@@ -84,10 +84,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1691E754022217B52671D98A23731A08"
-               BuildableName = "Disk.framework"
-               BlueprintName = "Disk"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+               BlueprintIdentifier = "FDBE77672050A2560023F5B5"
+               BuildableName = "littleStore.app"
+               BlueprintName = "littleStore"
+               ReferencedContainer = "container:littleStore.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
