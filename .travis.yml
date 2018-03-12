@@ -15,6 +15,6 @@ xcode_sdk: iphonesimulator7.1
 # script: xcodebuild -workspace littleStore.xcworkspace -scheme littleStoreTests -sdk iphonesimulator7.1 -configuration test-without-building
 
 # script: xcodebuild test -workspace littleStore.xcworkspace -scheme littleStoreTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-script: xcodebuild -workspace littleStore.xcworkspace -scheme littleStore -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+script: xcodebuild test -workspace littleStore.xcworkspace -scheme littleStore -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 
 
