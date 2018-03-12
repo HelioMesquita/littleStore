@@ -1,4 +1,4 @@
 language: swift
-xcode_workspace: littleStore.workspace # path to your xcodeproj folder
+xcode_workspace: littleStore.xcodeproj
 xcode_scheme: littleStore
 osx_image: xcode9.2
