@@ -11,4 +11,4 @@ xcode_workspace: littleStore.xcworkspace # if you're using cocoapods
 # xcode_project: MyAwesomeApp.xcproject #if you're not using cocoapods
 xcode_scheme: littleStore
 
-script: xcodebuild -workspace littleStore.xcworkspace -scheme littleStore -configuration test-without-building
+script: xcodebuild -workspace littleStore.xcworkspace -scheme littleStore -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.2' test-without-building
