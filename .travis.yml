@@ -11,4 +11,4 @@ xcode_workspace: littleStore.xcworkspace # if you're using cocoapods
 # xcode_project: MyAwesomeApp.xcproject #if you're not using cocoapods
 xcode_scheme: littleStore
 
-script: xcodebuild -workspace littleStore.xcworkspace -scheme littleStore -configuration Debug build test
+script: xcodebuild -workspace littleStore.xcworkspace -scheme littleStore -configuration test-without-building
