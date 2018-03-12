@@ -1,4 +1,4 @@
 language: swift
 xcode_workspace: littleStore.xcodeproj
-xcode_scheme: littleStore
+xcode_scheme: littleStoreTests
 osx_image: xcode9.2
