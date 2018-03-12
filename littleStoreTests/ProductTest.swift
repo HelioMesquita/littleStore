@@ -4,6 +4,6 @@ import XCTest
 class ProductListTests: XCTestCase {
 
   func testPath() {
-    XCTAssertEqual(ProductList.path, "products.json")
+    XCTAssertEqual(ProductList.path, "products1.json")
   }
 }
