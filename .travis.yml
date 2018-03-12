@@ -1,0 +1,3 @@
+language: swift
+xcode_project: littleStore.xcodeproj # path to your xcodeproj folder
+xcode_scheme: littleStoreTests
