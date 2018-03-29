@@ -17,6 +17,6 @@ osx_image: xcode9.2
 
 # script: xcodebuild test -workspace littleStore.xcworkspace -scheme littleStoreTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 script:
-  - xcodebuild -workspace littleStore.xcworkspace -scheme littleStoreTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.2' test-without-building
+  - xcodebuild -workspace littleStore.xcworkspace -scheme littleStoreTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.2' test
 
 
