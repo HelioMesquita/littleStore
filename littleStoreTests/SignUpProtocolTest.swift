@@ -56,3 +56,4 @@ class SignInProtocolTest: XCTestCase {
     XCTAssertTrue(subject.loginFailed)
   }
 }
+
